@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../Work/SachaDVR"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "SachaDVR"
+	}
+}
