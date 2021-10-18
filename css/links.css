@@ -44,13 +44,14 @@ body{
 }
 
 .card-header{
-  background: #9050f7;
+  background: #ffffff00;
+  border: solid 5px white;
   padding: 60px 40px;
   position: relative;
   transition: .3s;
 }
 .card-header:hover {
-  background-color: #ab7df7;
+  background-color: #00000015;
   
 }
 
@@ -81,7 +82,7 @@ body{
 
 .mail a{
   font-size: 18px;
-  color: #e66767;
+  color: #74b9ff;
 }
 
 .sm-box {
@@ -100,10 +101,10 @@ body{
   font-size: 22px;
   transition: .3s linear;
   padding: 5px;
-  border-bottom: solid 3px #ab7df7;
+  border-bottom: solid 3px #74b9ff;
 }
 .sm a:hover{
-  color: #e66767;
+  color: #74b9ff;
 }
 
 .sm a:hover {
@@ -114,15 +115,15 @@ body{
 .contact-btn{
   display: inline-block;
   padding: 12px 50px;
-  color: #e66767;
-  border: 2px solid #e66767;
+  color: #74b9ff;
+  border: 2px solid #74b9ff;
   border-radius: 6px;
   margin-top: 16px;
   transition: .3s linear;
 }
 
 .contact-btn:hover{
-  background: #e66767;
+  background: #74b9ff;
   
   color: #f2f2f2;
 }
@@ -354,8 +355,8 @@ footer {
     opacity: 0.9;
   }
   .basic-content {
-    background: url(../images/bg1.jpg) no-repeat center;
-    background-color: whitesmoke;
+    /* background: url(../images/bg1.jpg) no-repeat center; */
+    background-color: rgb(54, 52, 52);
     background-size:cover;
     background-attachment:fixed;
     height: 100vh;

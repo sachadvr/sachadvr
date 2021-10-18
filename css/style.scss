@@ -6,9 +6,11 @@
   font-display: swap;
 }
 
-$main: #f89659;
-$main_frg: #e66767;
+$main: #90a3ff;
+// f89659
+$main_frg: #ffffff;
 $dark_mode: #303030;
+$black_mode: black;
 
 * {
   font-family: QucikSand;
@@ -24,7 +26,7 @@ html {
   
 }
 ::selection {
-  background-color: $main_frg;
+  background-color: $black_mode;
   color: white;
 }
 .profile-card {
@@ -33,18 +35,40 @@ html {
   transition: all 0.3s linear;
   margin-top: -5vh;
   border-radius: 8px;
-  min-width: 400px;
-  width: 35%;
+  min-width: 00px;
+  width: 32%;
+
+  .card-footer {
+      
+    opacity: 0;
+    transform: translateY(4em);
+  }
+  .card-header {
+    transform:translateY(3em);
+    transition: 200ms all;
+  }
+  &:hover {
+    .card-footer {
+      
+      opacity: 1;
+      
+      transform: translateY(0);
+      visibility: visible;
+      transition: 200ms all;
+    }
+    .card-header {
+      transition: 200ms all;
+      transform:translateY(0em);
+      
+    }
+  }
 }
 
 .card-header {
   background: $main;
   padding: 60px 40px;
+  
 
-  &:hover {
-    background-color: rgba($main, 0.95);
-    filter: brightness(1.05);
-  }
 }
 .pic {
   display: inline-block;
@@ -74,12 +98,12 @@ html {
 }
 .name {
   color: #f2f2f2;
-  font-size: 28px;
+  font-size: 1.2em;
   font-weight: 600;
   margin: 10px 0;
 }
 .desc {
-  font-size: 18px;
+  font-size: 16px;
   color: $main_frg;
 }
 .sm {
@@ -106,13 +130,14 @@ html {
   margin-top: 16px;
   animation: w71 1s;
   &:hover {
-    background: linear-gradient($main_frg, #e66767cb);
-    color: #f2f2f2;
+    background: white;
+    color: black;
   }
 }
 .card-footer {
-  background: #f4f4f4;
-  padding: 40px 10px;
+  background: #484848a1;
+  cursor: url("..//images/cursor.png") 16 16, auto;
+  padding: 20px 10px;
 }
 .numbers {
   display: flex;
@@ -122,10 +147,10 @@ html {
   flex: 1;
   text-transform: uppercase;
   font-size: 13px;
-  color: $main_frg;
+  color: white;
   span {
     display: block;
-    color: #2c3a47;
+    color: white;
     font-size: 30px;
   }
 }
@@ -251,15 +276,16 @@ h1 {
 }
 
 .contact {
-  background-color: #f88a69;
+  background-color: black;
 
   h2 {
     display: flex;
     gap: 20px;
+    color: white;
   }
 
   p#desc {
-    color: rgb(63, 63, 63);
+    color: rgb(255, 255, 255);
     width: 90%;
     max-width: 600px;
     padding: 15px 0;
@@ -289,14 +315,14 @@ input {
   vertical-align: top;
   border-radius: 15px;
   padding: 10px;
-  background-color: rgb(241, 226, 226);
+  background-color: rgb(255, 255, 255);
   border: 1px white;
   cursor: url("..//images/cursor.png") 16 16, auto;
   &:hover {
-    background-color: rgb(255, 207, 179);
+    background-color: rgb(175, 185, 254);
   }
   &:focus {
-    background-color: rgb(255, 246, 246);
+    background-color: rgb(175, 185, 254);
     border-radius: 15px;
     transition: 0.5s;
   }
@@ -306,7 +332,7 @@ input {
         position: absolute;
         display: inline-block;
         margin-left: 15px;
-        color: rgb(80, 70, 70);
+        color: rgb(255, 255, 255);
         content: "✓";
       }
     }
@@ -319,17 +345,17 @@ textarea {
   vertical-align: top;
   border-radius: 15px;
   padding: 10px;
-  background-color: rgb(241, 226, 226);
+  background-color: rgb(255, 255, 255);
   border: 1px white;
   cursor: url("..//images/cursor.png") 16 16, auto;
   height: 5em;
   padding: 15px;
   resize: vertical;
   &:hover {
-    background-color: rgb(255, 207, 179);
+    background-color: rgb(175, 185, 254);
   }
   &:focus {
-    background-color: rgb(255, 246, 246);
+    background-color: rgb(175, 185, 254);
     border-radius: 15px;
     transition: 0.5s;
   }
@@ -341,7 +367,6 @@ input#btnsubmit {
   cursor: pointer;
   position: relative;
   background-size: 200% 100%;
-  color: white;
   font-size: 14px;
   font-weight: 500;
   transition: background-position 0.5s;
@@ -352,14 +377,14 @@ input#btnsubmit {
   background-image: linear-gradient(
     90deg,
     rgb(80, 69, 65) 50%,
-    rgb(255, 207, 179) 50%
+    rgb(255, 255, 255) 50%
   );
   &:hover {
     transition: 1s;
     background-image: linear-gradient(
       90deg,
       rgb(94, 79, 72) 50%,
-      rgb(255, 207, 179) 50%
+      rgb(255, 255, 255) 50%
     );
   }
 }
@@ -381,7 +406,8 @@ form {
   margin: auto;
   margin-top: 15px;
   padding: 40px 0 40px 0;
-  background-color: #fa9170;
+  background-color: black;
+  color:white;
   border: 0px solid white;
   border-radius: 2px;
   overflow-y: hidden;
@@ -436,20 +462,22 @@ header {
 }
 .scroll {
   display: inline-block;
+  right: 3px;
   position: absolute;
   user-select: none;
-  bottom: 1.8em;
+  bottom: 0.9em;
   font-size: 1.5rem;
   margin: 1em;
 
   a {
     padding: 5px 15px;
-    color: white;
+    color: rgb(103, 112, 173);;
+    font-weight: 700;
     border-radius: 10px;
-    box-shadow: 0 3px 3px 1px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 3px 3px 1px rgba(255, 255, 255, 0.69);
     &:hover {
       transition: 0.2s linear;
-      background: rgba(255, 255, 255, 0.155);
+      background: rgba(255, 255, 255, 0.663);
     }
     &:active {
       transition: 1s ease-out;
@@ -471,27 +499,42 @@ span#highlight {
     visibility: hidden;
 
     width: 10%;
-    height: 10%;
+    height: 20%;
     left: 50%;
     top: 50%;
-    transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%) rotateX(14deg) rotateY(340deg);
 
     position: absolute;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.479);
+    background: rgba(0, 0, 0, 1);
     color: white;
     transition: 0.5s ease-in;
     cursor: url("..//images/cursor.png") 16 16, auto;
 
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-position:left;
+   
+    background-size: 10% 10%;
+    background-repeat: repeat;
+    &:hover {
+      background-size: 100% 100%;
+      background-position-x: -130px;
+      
+    }
 
     p {
       position: absolute;
-      bottom: 0;
+      width: 30%;
+      height: 100%;
+      border: 1px solid black;
+      right: 0em;
+      top: 0em;
       opacity: 1;
       background: $main_frg;
+    }
+    #highlight {
+      background: black;
+      padding: 2px;
+      color: white;
     }
   }
 }
@@ -585,7 +628,7 @@ span#highlight {
   }
   position: relative;
   background-position: center;
-  cursor: not-allowed;
+  cursor:zoom-in;
   text-decoration: none;
   color: black;
   overflow: hidden;
@@ -640,7 +683,7 @@ span#highlight {
   margin-left: -298px;
   padding: 5px;
   transition: ease-in-out 0.2s;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   display: none;
   transition: 1s;
 }
@@ -666,7 +709,7 @@ span#highlight {
     padding: 8px 15px;
     background: rgba(255, 255, 255, 1);
     font-size: 30px;
-    color: $main_frg;
+    color: black;
     box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.301);
     &:hover {
       color: $dark_mode;
@@ -686,12 +729,27 @@ span#highlight {
 
 //* IPAD mode *
 @media screen and (min-width: 700px) and (max-width: 1024px) {
+  .profile-card {
+    &, &:hover {
+      .card-footer {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      .card-header {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
   header {
     margin: auto;
     width: 100%;
     display: block;
     overflow: hidden;
     padding-bottom: 10px;
+    padding-top: 10px;
     min-height: auto;
 
     & > * {
@@ -742,6 +800,20 @@ span#highlight {
 //* Mobile mode *
 
 @media screen and (max-width: 700px) {
+  .profile-card {
+    &, &:hover {
+      .card-footer {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      .card-header {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
   .info {
     margin: auto;
     width: 90%;
@@ -784,6 +856,7 @@ span#highlight {
     margin: auto;
     border-radius: 0px;
     width: 100%;
+    
   }
   .scroll {
     display: none;

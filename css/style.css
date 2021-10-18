@@ -29,12 +29,12 @@ html {
 }
 
 ::-moz-selection {
-  background-color: #e66767;
+  background-color: black;
   color: white;
 }
 
 ::selection {
-  background-color: #e66767;
+  background-color: black;
   color: white;
 }
 
@@ -45,19 +45,42 @@ html {
   transition: all 0.3s linear;
   margin-top: -5vh;
   border-radius: 8px;
-  min-width: 400px;
-  width: 35%;
+  min-width: 00px;
+  width: 32%;
+}
+
+.profile-card .card-footer {
+  opacity: 0;
+  -webkit-transform: translateY(4em);
+          transform: translateY(4em);
+}
+
+.profile-card .card-header {
+  -webkit-transform: translateY(3em);
+          transform: translateY(3em);
+  -webkit-transition: 200ms all;
+  transition: 200ms all;
+}
+
+.profile-card:hover .card-footer {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  visibility: visible;
+  -webkit-transition: 200ms all;
+  transition: 200ms all;
+}
+
+.profile-card:hover .card-header {
+  -webkit-transition: 200ms all;
+  transition: 200ms all;
+  -webkit-transform: translateY(0em);
+          transform: translateY(0em);
 }
 
 .card-header {
-  background: #f89659;
+  background: #90a3ff;
   padding: 60px 40px;
-}
-
-.card-header:hover {
-  background-color: rgba(248, 150, 89, 0.95);
-  -webkit-filter: brightness(1.05);
-          filter: brightness(1.05);
 }
 
 .pic {
@@ -94,14 +117,14 @@ html {
 
 .name {
   color: #f2f2f2;
-  font-size: 28px;
+  font-size: 1.2em;
   font-weight: 600;
   margin: 10px 0;
 }
 
 .desc {
-  font-size: 18px;
-  color: #e66767;
+  font-size: 16px;
+  color: #ffffff;
 }
 
 .sm {
@@ -125,14 +148,14 @@ html {
 }
 
 .sm a:hover {
-  color: #e66767;
+  color: #ffffff;
 }
 
 .contact-btn {
   display: inline-block;
   padding: 12px 50px;
-  color: #e66767;
-  border: 2px solid #e66767;
+  color: #ffffff;
+  border: 2px solid #ffffff;
   border-radius: 24px;
   margin-top: 16px;
   -webkit-animation: w71 1s;
@@ -140,14 +163,14 @@ html {
 }
 
 .contact-btn:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e66767), to(#e66767cb));
-  background: linear-gradient(#e66767, #e66767cb);
-  color: #f2f2f2;
+  background: white;
+  color: black;
 }
 
 .card-footer {
-  background: #f4f4f4;
-  padding: 40px 10px;
+  background: #484848a1;
+  cursor: url("..//images/cursor.png") 16 16, auto;
+  padding: 20px 10px;
 }
 
 .numbers {
@@ -165,12 +188,12 @@ html {
           flex: 1;
   text-transform: uppercase;
   font-size: 13px;
-  color: #e66767;
+  color: white;
 }
 
 .item span {
   display: block;
-  color: #2c3a47;
+  color: white;
   font-size: 30px;
 }
 
@@ -318,7 +341,7 @@ h1 {
 }
 
 .contact {
-  background-color: #f88a69;
+  background-color: black;
 }
 
 .contact h2 {
@@ -326,10 +349,11 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   gap: 20px;
+  color: white;
 }
 
 .contact p#desc {
-  color: #3f3f3f;
+  color: white;
   width: 90%;
   max-width: 600px;
   padding: 15px 0;
@@ -360,17 +384,17 @@ input {
   vertical-align: top;
   border-radius: 15px;
   padding: 10px;
-  background-color: #f1e2e2;
+  background-color: white;
   border: 1px white;
   cursor: url("..//images/cursor.png") 16 16, auto;
 }
 
 input:hover {
-  background-color: #ffcfb3;
+  background-color: #afb9fe;
 }
 
 input:focus {
-  background-color: #fff6f6;
+  background-color: #afb9fe;
   border-radius: 15px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -380,7 +404,7 @@ input:valid + span:not(#spansubmit):after {
   position: absolute;
   display: inline-block;
   margin-left: 15px;
-  color: #504646;
+  color: white;
   content: "✓";
 }
 
@@ -391,7 +415,7 @@ textarea {
   vertical-align: top;
   border-radius: 15px;
   padding: 10px;
-  background-color: #f1e2e2;
+  background-color: white;
   border: 1px white;
   cursor: url("..//images/cursor.png") 16 16, auto;
   height: 5em;
@@ -400,11 +424,11 @@ textarea {
 }
 
 textarea:hover {
-  background-color: #ffcfb3;
+  background-color: #afb9fe;
 }
 
 textarea:focus {
-  background-color: #fff6f6;
+  background-color: #afb9fe;
   border-radius: 15px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -418,22 +442,21 @@ input#btnsubmit {
   cursor: pointer;
   position: relative;
   background-size: 200% 100%;
-  color: white;
   font-size: 14px;
   font-weight: 500;
   -webkit-transition: background-position 0.5s;
   transition: background-position 0.5s;
   border-radius: 4px;
   height: 38px;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #504541), color-stop(50%, #ffcfb3));
-  background-image: linear-gradient(90deg, #504541 50%, #ffcfb3 50%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #504541), color-stop(50%, white));
+  background-image: linear-gradient(90deg, #504541 50%, white 50%);
 }
 
 input#btnsubmit:hover {
   -webkit-transition: 1s;
   transition: 1s;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #5e4f48), color-stop(50%, #ffcfb3));
-  background-image: linear-gradient(90deg, #5e4f48 50%, #ffcfb3 50%);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #5e4f48), color-stop(50%, white));
+  background-image: linear-gradient(90deg, #5e4f48 50%, white 50%);
 }
 
 label {
@@ -449,7 +472,8 @@ form {
   margin: auto;
   margin-top: 15px;
   padding: 40px 0 40px 0;
-  background-color: #fa9170;
+  background-color: black;
+  color: white;
   border: 0px solid white;
   border-radius: 2px;
   overflow-y: hidden;
@@ -523,28 +547,30 @@ header {
 
 .scroll {
   display: inline-block;
+  right: 3px;
   position: absolute;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  bottom: 1.8em;
+  bottom: 0.9em;
   font-size: 1.5rem;
   margin: 1em;
 }
 
 .scroll a {
   padding: 5px 15px;
-  color: white;
+  color: #6770ad;
+  font-weight: 700;
   border-radius: 10px;
-  -webkit-box-shadow: 0 3px 3px 1px rgba(255, 255, 255, 0.2);
-          box-shadow: 0 3px 3px 1px rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0 3px 3px 1px rgba(255, 255, 255, 0.69);
+          box-shadow: 0 3px 3px 1px rgba(255, 255, 255, 0.69);
 }
 
 .scroll a:hover {
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
-  background: rgba(255, 255, 255, 0.155);
+  background: rgba(255, 255, 255, 0.663);
 }
 
 .scroll a:active {
@@ -569,28 +595,43 @@ span#highlight {
   opacity: 0;
   visibility: hidden;
   width: 10%;
-  height: 10%;
+  height: 20%;
   left: 50%;
   top: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%) rotateX(14deg) rotateY(340deg);
+          transform: translateY(-50%) translateX(-50%) rotateX(14deg) rotateY(340deg);
   position: absolute;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.479);
+  background: black;
   color: white;
   -webkit-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
   cursor: url("..//images/cursor.png") 16 16, auto;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 10% 10%;
+  background-repeat: repeat;
+}
+
+.boxcontainer #active:hover {
+  background-size: 100% 100%;
+  background-position-x: -130px;
 }
 
 .boxcontainer #active p {
   position: absolute;
-  bottom: 0;
+  width: 30%;
+  height: 100%;
+  border: 1px solid black;
+  right: 0em;
+  top: 0em;
   opacity: 1;
-  background: #e66767;
+  background: #ffffff;
+}
+
+.boxcontainer #active #highlight {
+  background: black;
+  padding: 2px;
+  color: white;
 }
 
 .section-title {
@@ -659,7 +700,8 @@ span#highlight {
 .project-box {
   position: relative;
   background-position: center;
-  cursor: not-allowed;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
   text-decoration: none;
   color: black;
   overflow: hidden;
@@ -768,7 +810,7 @@ span#highlight {
   padding: 5px;
   -webkit-transition: ease-in-out 0.2s;
   transition: ease-in-out 0.2s;
-  color: white;
+  color: black;
   display: none;
   -webkit-transition: 1s;
   transition: 1s;
@@ -802,7 +844,7 @@ span#highlight {
   padding: 8px 15px;
   background: white;
   font-size: 30px;
-  color: #e66767;
+  color: black;
   -webkit-box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.301);
           box-shadow: 0 3px 3px 1px rgba(0, 0, 0, 0.301);
 }
@@ -823,12 +865,25 @@ span#highlight {
 }
 
 @media screen and (min-width: 700px) and (max-width: 1024px) {
+  .profile-card .card-footer, .profile-card:hover .card-footer {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .profile-card .card-header, .profile-card:hover .card-header {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
   header {
     margin: auto;
     width: 100%;
     display: block;
     overflow: hidden;
     padding-bottom: 10px;
+    padding-top: 10px;
     min-height: auto;
   }
   header > * {
@@ -877,6 +932,18 @@ span#highlight {
 }
 
 @media screen and (max-width: 700px) {
+  .profile-card .card-footer, .profile-card:hover .card-footer {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  .profile-card .card-header, .profile-card:hover .card-header {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
   .info {
     margin: auto;
     width: 90%;
@@ -975,7 +1042,7 @@ span#highlight {
     color: #f78d8d;
   }
   span#highlight {
-    background-color: #e66767;
+    background-color: #ffffff;
     padding: 0 4px;
     border-radius: 1px;
   }

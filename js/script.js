@@ -69,7 +69,6 @@ document.getElementById("myForm").addEventListener("submit", function (e) {
 
   if (!isValid()) return;
   btnclick();
-  // if (isValid()) return;
 
   window.setTimeout(function () {
     submitAction();
@@ -78,13 +77,13 @@ document.getElementById("myForm").addEventListener("submit", function (e) {
 function info(test1) {
   var test2;
   if (test1 == 1) {
-    document.getElementById("active").innerHTML = "<p>CasaROSA</p>";
+    document.getElementById("active").innerHTML = "<p><div id=\"highlight\">CasaROSA <br><br>un projet de famille situé en Alentejo qui permettra la location d'une villa pour 12 personnes</div></p>";
     document.getElementById("active").style.backgroundImage = "url(../images/casarosa.PNG)";
-    // test2 = '<p>Le site est toujours en construction, de ce fait, afin de permettre les retouches, l\'apperçu n\'est pas disponnible</p>';
+   
   }else if (test1 == 2) {
-    // test2 = '<p>Le test est toujours en construction, de ce fait, afin de permettre les retouches, l\'apperçu n\'est pas disponnible</p>';
+
     document.getElementById("active").innerHTML = "<p>RV-SERVICES</p>";
-    document.getElementById("active").style.backgroundImage = "url(../images/showcase.svg)";
+    document.getElementById("active").style.backgroundImage = "url(../images/Rv-Services.svg)";
   } 
   window.setTimeout(function() {
     document.getElementById("active").style.visibility = "visible";
