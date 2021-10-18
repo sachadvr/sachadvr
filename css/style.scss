@@ -1,4 +1,8 @@
-*,*:after,*:before {box-sizing: border-box;}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
 
 @font-face {
   font-family: QucikSand;
@@ -23,7 +27,6 @@ $black_mode: black;
 }
 html {
   scroll-behavior: smooth;
-  
 }
 ::selection {
   background-color: $black_mode;
@@ -39,27 +42,24 @@ html {
   width: 32%;
 
   .card-footer {
-      
     opacity: 0;
     transform: translateY(4em);
   }
   .card-header {
-    transform:translateY(3em);
+    transform: translateY(3em);
     transition: 200ms all;
   }
   &:hover {
     .card-footer {
-      
       opacity: 1;
-      
+
       transform: translateY(0);
       visibility: visible;
       transition: 200ms all;
     }
     .card-header {
       transition: 200ms all;
-      transform:translateY(0em);
-      
+      transform: translateY(0em);
     }
   }
 }
@@ -67,8 +67,6 @@ html {
 .card-header {
   background: $main;
   padding: 60px 40px;
-  
-
 }
 .pic {
   display: inline-block;
@@ -188,7 +186,6 @@ a#close {
   border-radius: 0px;
   z-index: 100;
 
-
   display: block;
   box-shadow: 0 3px 3px 1px rgba(167, 167, 167, 0.301);
   width: 45%;
@@ -263,7 +260,6 @@ h1 {
   text-align: center;
   align-items: center;
   overflow: hidden;
-  
 
   position: relative;
   p {
@@ -407,7 +403,7 @@ form {
   margin-top: 15px;
   padding: 40px 0 40px 0;
   background-color: black;
-  color:white;
+  color: white;
   border: 0px solid white;
   border-radius: 2px;
   overflow-y: hidden;
@@ -457,8 +453,6 @@ header {
   background-attachment: local;
   min-height: 105vh;
   position: relative;
-
- 
 }
 .scroll {
   display: inline-block;
@@ -467,14 +461,15 @@ header {
   user-select: none;
   bottom: 0.9em;
   font-size: 1.5rem;
-  margin: 1em;
+  margin: 2em 1.5em;
 
   a {
     padding: 5px 15px;
-    color: rgb(103, 112, 173);;
+    color: rgb(99, 101, 110);
     font-weight: 700;
     border-radius: 10px;
-    box-shadow: 0 3px 3px 1px rgba(255, 255, 255, 0.69);
+    background: rgba(255, 255, 255, 0.265);
+    box-shadow: 0 3px 3px 1px rgba(107, 107, 107, 0.69);
     &:hover {
       transition: 0.2s linear;
       background: rgba(255, 255, 255, 0.663);
@@ -494,34 +489,29 @@ span#highlight {
 
   #active {
     display: flex;
-
     opacity: 0;
     visibility: hidden;
-
-    width: 10%;
-    height: 20%;
+    width: 0%;
+    height: 0%;
     left: 50%;
     top: 50%;
     transform: translateY(-50%) translateX(-50%) rotateX(14deg) rotateY(340deg);
-
     position: absolute;
     z-index: 1000;
-    background: rgba(0, 0, 0, 1);
-    color: white;
+    background: rgb(255, 255, 255);
+    color: black;
     transition: 0.5s ease-in;
     cursor: url("..//images/cursor.png") 16 16, auto;
-
-    background-position:left;
-   
+    background-position: left;
     background-size: 10% 10%;
+    overflow: hidden;
     background-repeat: repeat;
     &:hover {
       background-size: 100% 100%;
       background-position-x: -130px;
-      
     }
 
-    p {
+    #highlight {
       position: absolute;
       width: 30%;
       height: 100%;
@@ -530,11 +520,17 @@ span#highlight {
       top: 0em;
       opacity: 1;
       background: $main_frg;
-    }
-    #highlight {
-      background: black;
-      padding: 2px;
-      color: white;
+
+      p {
+        opacity: 0;
+        transition: 400ms;
+        transform: translateY(-50px);
+        margin-top: 5px;
+        color: white;
+        background: black;
+        padding: 3px;
+        margin-bottom: -15px;
+      }
     }
   }
 }
@@ -589,8 +585,6 @@ span#highlight {
     left: 0;
     z-index: -500;
   }
-
- 
 }
 
 // .project3 {
@@ -628,7 +622,7 @@ span#highlight {
   }
   position: relative;
   background-position: center;
-  cursor:zoom-in;
+  cursor: zoom-in;
   text-decoration: none;
   color: black;
   overflow: hidden;
@@ -729,8 +723,22 @@ span#highlight {
 
 //* IPAD mode *
 @media screen and (min-width: 700px) and (max-width: 1024px) {
+  .boxcontainer {
+    #active {
+      width: 50%;
+      #highlight {
+        width: 50%;
+        
+        p {
+          margin-top: 100px;
+          margin-bottom: -100px;
+        }
+      }
+    }
+  }
   .profile-card {
-    &, &:hover {
+    &,
+    &:hover {
       .card-footer {
         transform: translateY(0);
         opacity: 1;
@@ -800,8 +808,29 @@ span#highlight {
 //* Mobile mode *
 
 @media screen and (max-width: 700px) {
+  .boxcontainer {
+
+    #active {
+      width: 0%;
+      background-size: 0% 0%;
+      
+      &:hover {
+        background-size: 0% 0%;
+      }
+      #highlight {
+        background: rgba(255, 255, 255, 0.585);
+        width: 100%;
+        
+        p {
+          margin-top: 200px;
+          margin-bottom: -200px;
+        }
+      }
+    }
+  }
   .profile-card {
-    &, &:hover {
+    &,
+    &:hover {
       .card-footer {
         transform: translateY(0);
         opacity: 1;
@@ -856,7 +885,6 @@ span#highlight {
     margin: auto;
     border-radius: 0px;
     width: 100%;
-    
   }
   .scroll {
     display: none;

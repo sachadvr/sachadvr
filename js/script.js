@@ -11,12 +11,26 @@ var elmts = (document.getElementById("cgubtn").onclick = function () {
     this.toggled = !toggled;
   }
 });
-var elmts = (document.getElementById("close").onclick = function () {
-  var elmts = document.getElementsByClassName("info");
+var elmts1 = (document.getElementById("close").onclick = function () {
+  var elmts1 = document.getElementsByClassName("info");
   setTimeout(function () {
-    elmts[0].style.display = "none";
+    elmts1[0].style.display = "none";
   }, 300);
-  elmts[0].style.opacity = "0";
+  elmts1[0].style.opacity = "0";
+});
+
+var elmts2 = (document.getElementById("active").onclick = function () {
+  var elmts2 = document.getElementById("active");
+  
+  for (let pas = 0; pas < document.querySelectorAll("#highlight p").length; pas++) {
+    document.querySelectorAll("#highlight p")[pas].style.opacity = "0";
+    document.querySelectorAll("#highlight p")[pas].style.transform = "translateY(-200px)"
+  }
+  elmts2.style.visibility = "hidden";
+  elmts2.style.opacity = ".0";
+  elmts2.style.height = "0%";
+  elmts2.style.width = "0%";
+  
 });
 
 var form = document.forms["my_form"];
@@ -77,22 +91,27 @@ document.getElementById("myForm").addEventListener("submit", function (e) {
 function info(test1) {
   var test2;
   if (test1 == 1) {
-    document.getElementById("active").innerHTML = "<p><div id=\"highlight\">CasaROSA <br><br>un projet de famille situé en Alentejo qui permettra la location d'une villa pour 12 personnes</div></p>";
+    document.getElementById("active").innerHTML = "<div id=\"highlight\"><p>CasaROSA</p> <br><br><p>un projet de famille situé en Alentejo qui permettra la location d'une villa pour 12 personnes</p></div>";
     document.getElementById("active").style.backgroundImage = "url(../images/casarosa.PNG)";
    
   }else if (test1 == 2) {
 
-    document.getElementById("active").innerHTML = "<p>RV-SERVICES</p>";
+    document.getElementById("active").innerHTML = "<div id=\"highlight\"><p>RV-Services</p> <br><br><p>Refonte du site web RV-Services une entreprise artisanale multi-services</p></div>";
     document.getElementById("active").style.backgroundImage = "url(../images/Rv-Services.svg)";
   } 
   window.setTimeout(function() {
     document.getElementById("active").style.visibility = "visible";
     document.getElementById("active").style.opacity = ".95";
     document.getElementById("active").style.height = "95%";
-    document.getElementById("active").style.width = "95%";
+    document.getElementById("active").style.width= "95%";
     
   },0)
- 
+  window.setTimeout(function() {
+    for (let pas = 0; pas < document.querySelectorAll("#highlight p").length; pas++) {
+      document.querySelectorAll("#highlight p")[pas].style.opacity = "1";
+      document.querySelectorAll("#highlight p")[pas].style.transform = "translateY(50px)"
+    }
+  },400)
 }
 AOS.init({
   once: false,

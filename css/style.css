@@ -1,5 +1,7 @@
 @charset "UTF-8";
-*, *:after, *:before {
+*,
+*:after,
+*:before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -555,16 +557,17 @@ header {
           user-select: none;
   bottom: 0.9em;
   font-size: 1.5rem;
-  margin: 1em;
+  margin: 2em 1.5em;
 }
 
 .scroll a {
   padding: 5px 15px;
-  color: #6770ad;
+  color: #63656e;
   font-weight: 700;
   border-radius: 10px;
-  -webkit-box-shadow: 0 3px 3px 1px rgba(255, 255, 255, 0.69);
-          box-shadow: 0 3px 3px 1px rgba(255, 255, 255, 0.69);
+  background: rgba(255, 255, 255, 0.265);
+  -webkit-box-shadow: 0 3px 3px 1px rgba(107, 107, 107, 0.69);
+          box-shadow: 0 3px 3px 1px rgba(107, 107, 107, 0.69);
 }
 
 .scroll a:hover {
@@ -594,21 +597,22 @@ span#highlight {
   display: flex;
   opacity: 0;
   visibility: hidden;
-  width: 10%;
-  height: 20%;
+  width: 0%;
+  height: 0%;
   left: 50%;
   top: 50%;
   -webkit-transform: translateY(-50%) translateX(-50%) rotateX(14deg) rotateY(340deg);
           transform: translateY(-50%) translateX(-50%) rotateX(14deg) rotateY(340deg);
   position: absolute;
   z-index: 1000;
-  background: black;
-  color: white;
+  background: white;
+  color: black;
   -webkit-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
   cursor: url("..//images/cursor.png") 16 16, auto;
   background-position: left;
   background-size: 10% 10%;
+  overflow: hidden;
   background-repeat: repeat;
 }
 
@@ -617,7 +621,7 @@ span#highlight {
   background-position-x: -130px;
 }
 
-.boxcontainer #active p {
+.boxcontainer #active #highlight {
   position: absolute;
   width: 30%;
   height: 100%;
@@ -628,10 +632,17 @@ span#highlight {
   background: #ffffff;
 }
 
-.boxcontainer #active #highlight {
-  background: black;
-  padding: 2px;
+.boxcontainer #active #highlight p {
+  opacity: 0;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  margin-top: 5px;
   color: white;
+  background: black;
+  padding: 3px;
+  margin-bottom: -15px;
 }
 
 .section-title {
@@ -865,6 +876,16 @@ span#highlight {
 }
 
 @media screen and (min-width: 700px) and (max-width: 1024px) {
+  .boxcontainer #active {
+    width: 50%;
+  }
+  .boxcontainer #active #highlight {
+    width: 50%;
+  }
+  .boxcontainer #active #highlight p {
+    margin-top: 100px;
+    margin-bottom: -100px;
+  }
   .profile-card .card-footer, .profile-card:hover .card-footer {
     -webkit-transform: translateY(0);
             transform: translateY(0);
@@ -932,6 +953,21 @@ span#highlight {
 }
 
 @media screen and (max-width: 700px) {
+  .boxcontainer #active {
+    width: 0%;
+    background-size: 0% 0%;
+  }
+  .boxcontainer #active:hover {
+    background-size: 0% 0%;
+  }
+  .boxcontainer #active #highlight {
+    background: rgba(255, 255, 255, 0.585);
+    width: 100%;
+  }
+  .boxcontainer #active #highlight p {
+    margin-top: 200px;
+    margin-bottom: -200px;
+  }
   .profile-card .card-footer, .profile-card:hover .card-footer {
     -webkit-transform: translateY(0);
             transform: translateY(0);
