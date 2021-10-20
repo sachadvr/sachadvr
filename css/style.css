@@ -610,15 +610,15 @@ span#highlight {
   -webkit-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
   cursor: url("..//images/cursor.png") 16 16, auto;
-  background-position: left;
-  background-size: 10% 10%;
+  background-position: right;
+  background-size: 100px 100px;
   overflow: hidden;
   background-repeat: repeat;
 }
 
 .boxcontainer #active:hover {
-  background-size: 100% 100%;
-  background-position-x: -130px;
+  background-size: 70% 90%;
+  background-position-x: -0px;
 }
 
 .boxcontainer #active #highlight {
