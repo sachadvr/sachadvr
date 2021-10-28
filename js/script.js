@@ -97,7 +97,7 @@ function info(test1) {
   }else if (test1 == 2) {
 
     document.getElementById("active").innerHTML = "<div id=\"highlight\"><p>RV-Services</p> <br><br><p>Refonte du site web RV-Services une entreprise artisanale multi-services</p></div>";
-    document.getElementById("active").style.backgroundImage = "url(../images/Rv-Services.svg)";
+    document.getElementById("active").style.backgroundImage = "url(../images/dashboard.png)";
   } 
   window.setTimeout(function() {
     document.getElementById("active").style.visibility = "visible";
