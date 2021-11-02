@@ -26,6 +26,14 @@ html {
   box-sizing: border-box;
   text-decoration: none;
 }
+.pic #img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: url(../images/photo.jpeg);
+  background-size: 100%;
+}
 
 body{
   align-items: center;
