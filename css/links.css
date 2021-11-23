@@ -16,6 +16,14 @@
     background-position: left top;
   }
 }
+@keyframes cardfromleft {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 html {
   scroll-behavior: smooth;
   font-family: "QucikSand", sans-serif;
@@ -47,13 +55,16 @@ body{
   text-align: center;
   overflow: hidden;
   transition: all .3s linear;
+  background-color: rgb(37, 37, 37);
+  animation: cardfromleft 1s;
+  box-shadow: 10px 10px 30px 2px black;
   
   
 }
 
 .card-header{
   background: #ffffff00;
-  border: solid 5px white;
+  /* border: solid 5px white; */
   padding: 60px 40px;
   position: relative;
   transition: .3s;
