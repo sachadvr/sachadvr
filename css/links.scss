@@ -2,7 +2,7 @@
 	font-family: QucikSand;
 	src: url(../ressources/Quicksand.ttf);
 }
-@keyframes "animated-gradient" {
+@keyframes animated-gradient {
 	25% {
 		background-position: left bottom;
 	}
@@ -16,7 +16,7 @@
 		background-position: left top;
 	}
 }
-@keyframes "cardfromleft" {
+@keyframes cardfromleft {
 	0% {
 		transform: translateX(100px);
 	}
@@ -24,7 +24,7 @@
 		transform: translateX(0);
 	}
 }
-@keyframes "sweep" {
+@keyframes sweep {
 	0% {
 		opacity: 0;
 		margin-left: -10px;
