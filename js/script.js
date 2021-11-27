@@ -95,12 +95,12 @@ function info(test1) {
     var test2;
     if (test1 == 1) {
         document.getElementById("active").innerHTML = "<div id=\"highlight\"><p>CasaROSA</p> <br><br><p>un projet de famille situé en Alentejo qui permettra la location d'une villa pour 12 personnes</p></div>";
-        document.getElementById("active").style.backgroundImage = "url(../images/casarosa.png)";
+        document.getElementById("active").style.backgroundImage = "url(./images/casarosa.png)";
 
     } else if (test1 == 2) {
 
         document.getElementById("active").innerHTML = "<div id=\"highlight\"><p>RV-Services</p> <br><br><p>Refonte du site web RV-Services une entreprise artisanale multi-services</p></div>";
-        document.getElementById("active").style.backgroundImage = "url(../images/rv-services.svg)";
+        document.getElementById("active").style.backgroundImage = "url(./images/rv-services.svg)";
     }
     window.setTimeout(function() {
         document.getElementById("active").style.visibility = "visible";
