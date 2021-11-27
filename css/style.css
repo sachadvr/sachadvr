@@ -592,6 +592,8 @@ span#highlight {
 }
 
 .boxcontainer #active {
+  -webkit-box-shadow: -3px -3px 5px 0 #727171;
+          box-shadow: -3px -3px 5px 0 #727171;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -626,11 +628,13 @@ span#highlight {
   position: absolute;
   width: 30%;
   height: 100%;
-  border: 1px solid black;
   right: 0em;
-  top: 0em;
   opacity: 1;
-  background: #ffffff;
+  background: rgba(43, 43, 43, 0.938);
+}
+
+.boxcontainer #active #highlight p:nth-of-type(1) {
+  margin-top: 120px;
 }
 
 .boxcontainer #active #highlight p {
@@ -639,11 +643,14 @@ span#highlight {
   transition: 400ms;
   -webkit-transform: translateY(-50px);
           transform: translateY(-50px);
-  margin-top: 5px;
   color: white;
+  padding: 10px;
+  border-radius: 0;
+}
+
+.boxcontainer #active #highlight p:last-child {
+  border-radius: 8px;
   background: black;
-  padding: 3px;
-  margin-bottom: -15px;
 }
 
 .section-title {

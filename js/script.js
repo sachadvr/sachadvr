@@ -112,7 +112,7 @@ function info(test1) {
     window.setTimeout(function() {
         for (let pas = 0; pas < document.querySelectorAll("#highlight p").length; pas++) {
             document.querySelectorAll("#highlight p")[pas].style.opacity = "1";
-            document.querySelectorAll("#highlight p")[pas].style.transform = "translateY(50px)"
+            document.querySelectorAll("#highlight p")[pas].style.transform = "translateY(0px)"
         }
     }, 400)
 }
