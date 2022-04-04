@@ -10,8 +10,6 @@
 > Objectif : refonte du site en React
 ### 🏠 [Homepage](https://www.sachadvr.fr)
 
-<img src="https://github.com/sachadvr/sachadvr/blob/main/screenshot.png?raw=true">
-
 ## Auteur
 
 👤 **sachadvr**
