@@ -1,5 +1,5 @@
-import { faCss3, faHtml5, faJs, faPhp, faPython, faSquareJs } from '@fortawesome/free-brands-svg-icons';
-import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faCss3, faHtml5, faJs, faPhp, faPython, faSass, faSquareJs } from '@fortawesome/free-brands-svg-icons';
+import { faComputer, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
 import { Link } from 'react-router-dom';
@@ -67,50 +67,19 @@ const Portfolio = () => {
                 {portfolio.map((project) => (
                     <Link className="project-box no-grid noimage" key={project?.name} to={`/git/${project?.name}`}>
                         <div className="project-bio">
-                            <h1 className="project-name">{project?.name} <FontAwesomeIcon icon={faSpinner } /></h1>
-                            <h3 className="project-desc">{project?.description} <br/>
-                            {/* {Object.keys(project?.languages).map((language, index) => {
-                                if (index === Object.keys(project?.languages).length - 1) {
-                                    return language;
-                                }
-                                return language + '/';
-                            })} */}
-                            {/* The value is the number of lines used in the project, to get percentage, there is a need to calculate the total of the lines of all the langages, but if only one language it will then be 100% */}
-                            {/* show only percentage and the language */}
+                            <h1 className="project-name">{project?.name}</h1>
+                            <h3 className="project-desc">{project?.description}
+                            <div className="langs flex gap-3 items-center">
+
                             {Object.keys(project?.languages).map((language, index) => {
-                                if (index === Object.keys(project?.languages).length - 1) {
-                                    // if its HTML display FontAwesomeIcon HTML5
-                                    
-                                        // case "HTML" => <FontAwesomeIcon icon={faHtml5} />
-                                        // case "CSS" => <FontAwesomeIcon icon={faCss3} />
-                                        // case "JavaScript" => <FontAwesomeIcon icon={faJs} />
-                                        // case "TypeScript" => <FontAwesomeIcon icon={faJs} />
-                                        // case "PHP" => <FontAwesomeIcon icon={faPhp} />
-                                        // case "Python" => <FontAwesomeIcon icon={faPython} />
-                                        // case "C" => <FontAwesomeIcon icon={faC} />
 
-                                    //    switch (language) {
-                                    //          case "HTML" || "HTML5":
-                                    //                 return <FontAwesomeIcon icon={faHtml5} />
-                                    //             case "CSS":
-                                    //                 return <FontAwesomeIcon icon={faCss3} />
-                                    //             case "JavaScript":
-                                    //                 return <FontAwesomeIcon icon={faJs} />
-                                    //             case "TypeScript":
-                                    //                 return <FontAwesomeIcon icon={faSquareJs} />
-                                    //             case "PHP":
-                                    //                 return <FontAwesomeIcon icon={faPhp} />
-                                    //             case "Python":
-                                    //                 return <FontAwesomeIcon icon={faPython} />
-                                    //             case "C":
-                                    //                 return <FontAwesomeIcon icon={'computer-classic'} />
-                                    //             default:
-                                    //                 return language;
-
-                                    if (language == "HTML" || language == "HTML5") {
+                                    if (language == "HTML") {
                                         return <FontAwesomeIcon icon={faHtml5} key={language} />
                                     } else if (language == "CSS") {
                                         return <FontAwesomeIcon icon={faCss3} key={language} />
+                                    }else if (language == "SCSS") {
+                                        return <FontAwesomeIcon icon={faSass} key={language} />
+                                    
                                     } else if (language == "JavaScript") {
                                         return <FontAwesomeIcon icon={faJs} key={language} />
                                     } else if (language == "TypeScript") {
@@ -119,14 +88,17 @@ const Portfolio = () => {
                                         return <FontAwesomeIcon icon={faPhp} key={language} />
                                     } else if (language == "Python") {
                                         return <FontAwesomeIcon icon={faPython} key={language} />
-                                    } 
+                                    }else if (language == "Shell") {
+                                        return <FontAwesomeIcon icon={faComputer} key={language}/>
+                                }else {
+                                    return language;
                                 }
-                                return language + '/';
                                     
                                 
                                 
                             
                             })}
+                            </div>
 
                                 </h3>
                             </div>

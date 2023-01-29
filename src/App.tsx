@@ -5,6 +5,7 @@ import Layout from "./pages/Layout";
 import NotFound from "./pages/NotFound";
 import Repo from "./pages/Git/[repo]";
 import Git from "./pages/Git/Git";
+import Links from "./pages/Links";
 
 function App(): JSX.Element {
 
@@ -15,6 +16,7 @@ function App(): JSX.Element {
     <Route path="/" element={<Layout />}>
     <Route index element={<Home />} />
     <Route path="*" element={<NotFound />} />
+    <Route path="links" element={<Links />} />
     <Route path="git" element={<Git />} />
     <Route path="git/:repoName" element={<Repo />} />
           

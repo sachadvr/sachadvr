@@ -4,6 +4,8 @@
 .boxcontainer {
   position: relative;
   padding: 1rem;
+  width: 100%;
+  max-width: 1000px;
 
   #active {
     display: flex;
@@ -111,7 +113,8 @@
     color: currentColor;
     content: "En savoir plus";
     background: white;
-    opacity: 0.9;
+    opacity: 1;
+    z-index: 99;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -120,7 +123,7 @@
     align-items: center;
     left: -100%;
     transition: left 0.4s;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 500;
     border: solid 0px white;
   }
@@ -176,9 +179,9 @@
 }
 
 .no-grid {
-  height: 200px;
+  height: 150px;
   flex: 1;
-  min-width: 300px;
+  min-width: 150px;
 }
 .project-bio {
   position: absolute;
@@ -193,11 +196,13 @@
 .project-name {
   font-weight: 500;
   font-size: 20px;
-  margin-top: -5px;
 
 }
 .project-desc {
   font-weight: 300;
-  font-size: 15px;
+  font-size: 10px;
+  @apply rounded-sm;
+ border: 1px solid black;
+  width: fit-content;
   bottom: 5px;
 }

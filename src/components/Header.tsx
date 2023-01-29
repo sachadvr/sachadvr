@@ -1,9 +1,10 @@
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF, faGithub, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import React from 'react'
 import { useEffect } from 'react'
 import './Header.scss'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
 
@@ -33,8 +34,8 @@ const Header = () => {
                 <div className="name">Sacha DVR</div>
                 <div className="desc">Dev & Designer</div>
                 <div className="sm">
-                    <a href="https://www.facebook.com/profile.php?id=100010069578181" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faFacebookF} />
+                    <a href="https://instagram.com/sachadvr" target="_blank" rel="noreferrer">
+                        <FontAwesomeIcon icon={faInstagram} />
                     </a>
                     <a href="https://twitter.com/SachaDvr" target="_blank" rel="noreferrer">
                         <FontAwesomeIcon icon={faTwitter} />
@@ -46,7 +47,7 @@ const Header = () => {
                         <FontAwesomeIcon icon={faGithub} />
                     </a>
                 </div>
-                <a href="./links.html" className="contact-btn">Me Contacter</a>
+                <Link to="/links" className="contact-btn">Me Contacter</Link>
             </div>
             <div className="card-footer">
                 <div className="numbers">
@@ -62,9 +63,16 @@ const Header = () => {
             </div>
         </div>
         <div className="scroll">
-            <a href="#whoami"><span>Scroll</span>
+            <Link to="/"
+            onClick={() => {
+                window.scrollTo({
+                    top: window.innerHeight,
+                    behavior: 'smooth'
+                })
+            }}
+            ><span>Scroll</span>
                 <FontAwesomeIcon icon={faAngleDown} />
-            </a>
+            </Link>
         </div>
 
 
