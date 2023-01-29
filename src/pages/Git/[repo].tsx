@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import { Link, useParams } from 'react-router-dom';
 import rehypeRaw from 'rehype-raw'
 import remarkGfm from 'remark-gfm'
+import githublogo from '../../images/github-logo-vector.svg'
 
 const Git = () => {
     const params = useParams();
@@ -64,7 +65,7 @@ const Git = () => {
               
               <Link to="/" ><h1><FontAwesomeIcon icon={faChevronCircleLeft} /> {item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()}</h1> </Link>
               {/* <img src={`https://raw.githubusercontent.com/sachadvr/${item.name}/master/preview.png`} alt={item.name} className='w-1/2' /> */}
-              <img src={"/src/images/github-logo-vector.svg"} alt={item.name} className='w-24' />
+              <img src={githublogo} alt={item.name} className='w-24' />
               <h1>{item.description}</h1>
 
               Ouvrir le projet sur github : <a href={`https://github.com/sachadvr/${item.name}`}>
