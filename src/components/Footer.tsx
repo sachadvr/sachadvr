@@ -1,9 +1,10 @@
 import React from 'react'
-
+import './Footer.scss'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer>Copyright {new Date().getFullYear()} © Sacha DVR. All Rights Reserved. <a href="#cgu">CGU</a>
+    </footer>
   )
 }
 
