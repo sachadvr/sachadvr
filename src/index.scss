@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'src/colors';
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url(./ressources/Quicksand.ttf);
+
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  outline: none;
+}
+::selection {
+  background-color: #000;
+  color: white;
+}
+body {
+  // min-height: 100vh;
+  // min-height: -webkit-fill-available;
+  min-width: 0;
+}
+html {
+  scroll-behavior: smooth;
+  height: -webkit-fill-available;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
