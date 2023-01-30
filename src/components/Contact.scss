@@ -1,6 +1,7 @@
 input {
     outline: none;
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
     padding: 4px;
     vertical-align: top;
     border-radius: 15px;
@@ -30,7 +31,8 @@ input {
   }
   textarea {
     outline: none;
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
     padding: 4px;
     vertical-align: top;
     border-radius: 15px;
