@@ -106,6 +106,10 @@ input {
   
     h2 {
       color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
     }
   
     p#desc {

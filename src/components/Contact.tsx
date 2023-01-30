@@ -1,13 +1,12 @@
-import { faAddressCard } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import './Contact.scss'
+import { FaAddressCard } from 'react-icons/fa'
 
 const Contact = () => {
   return (
     <div className="content contact">
         
-        <h2 id="contact"><FontAwesomeIcon icon={faAddressCard}/> Me contacter</h2>
+        <h2 id="contact grid grid-flow-row items-center "><FaAddressCard /> <span>Me contacter</span></h2>
 
        <p id="desc">Si vous souhaitez plus d&apos;informations, il est notamment possible de me contacter en remplissant le formulaire ci-dessous</p>
        <form name="my_form" id="myForm" action="mail.php" method="post">

@@ -1,6 +1,7 @@
-import { faCss3, faHtml5, faJs, faPhp, faPython, faSass, faSquareJs } from '@fortawesome/free-brands-svg-icons';
-import { faComputer, faSpinner } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaHtml5, FaCss3, FaSass, FaPython, FaPhp, FaSpinner} from 'react-icons/fa';
+import {SiTypescript} from 'react-icons/si';
+import { DiJavascript } from 'react-icons/di';
+import { VscTerminalPowershell } from 'react-icons/vsc';
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './Portfolio.scss'
@@ -68,13 +69,13 @@ const Portfolio = () => {
             <div className="portfolio-box">
                 <a className="project-box no-grid project1">
                     <div className="project-bio">
-                        <h1 className="project-name">CasaRosa.pt <FontAwesomeIcon icon={faSpinner } /></h1>
+                        <h1 className="project-name">CasaRosa.pt <FaSpinner /></h1>
                         <h3 className="project-desc">En cours</h3>
                     </div>
                 </a>
                 <a className="project-box no-grid project2">
                     <div className="project-bio">
-                        <h1 className="project-name">RV-Services <FontAwesomeIcon icon={faSpinner } /></h1>
+                        <h1 className="project-name">RV-Services <FaSpinner /></h1>
                         <h3 className="project-desc">En cours</h3>
                     </div>
                     
@@ -90,22 +91,22 @@ const Portfolio = () => {
                             {Object.keys(project?.languages).map((language, index) => {
 
                                     if (language == "HTML") {
-                                        return <FontAwesomeIcon icon={faHtml5} key={language} />
+                                        return <FaHtml5 key={language} />
                                     } else if (language == "CSS") {
-                                        return <FontAwesomeIcon icon={faCss3} key={language} />
+                                        return <FaCss3 key={language} />
                                     }else if (language == "SCSS") {
-                                        return <FontAwesomeIcon icon={faSass} key={language} />
+                                        return <FaSass key={language} />
                                     
                                     } else if (language == "JavaScript") {
-                                        return <FontAwesomeIcon icon={faJs} key={language} />
+                                        return <DiJavascript key={language} />
                                     } else if (language == "TypeScript") {
-                                        return <FontAwesomeIcon icon={faSquareJs} key={language} />
+                                        return <SiTypescript key={language} />
                                     } else if (language == "PHP") {
-                                        return <FontAwesomeIcon icon={faPhp} key={language} />
+                                        return <FaPhp key={language} />
                                     } else if (language == "Python") {
-                                        return <FontAwesomeIcon icon={faPython} key={language} />
+                                        return <FaPython key={language} />
                                     }else if (language == "Shell") {
-                                        return <FontAwesomeIcon icon={faComputer} key={language}/>
+                                        return <VscTerminalPowershell key={language}/>
                                 }else {
                                     return language;
                                 }

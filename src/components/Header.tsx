@@ -1,10 +1,8 @@
-import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebookF, faGithub, faInstagram, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import React from 'react'
 import { useEffect } from 'react'
 import './Header.scss'
 import { Link } from 'react-router-dom'
+import { FaInstagram, FaTwitter, FaLinkedinIn, FaGithub, FaAngleDown } from 'react-icons/fa'
 
 const Header = () => {
 
@@ -50,17 +48,17 @@ const Header = () => {
                 <div className="name">Sacha DVR</div>
                 <div className="desc">Dev & Designer</div>
                 <div className="sm">
-                    <a href="https://instagram.com/sachadvr" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faInstagram} />
+                    <a className="grid place-items-center" href="https://instagram.com/sachadvr" target="_blank" rel="noreferrer">
+                        <FaInstagram />
                     </a>
-                    <a href="https://twitter.com/SachaDvr" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faTwitter} />
+                    <a className="grid place-items-center" href="https://twitter.com/SachaDvr" target="_blank" rel="noreferrer">
+                        <FaTwitter />
                     </a>
-                    <a href="https://www.linkedin.com/in/sacha-duvivier-8b5a89205/" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faLinkedinIn} />
+                    <a className="grid place-items-center" href="https://www.linkedin.com/in/sacha-duvivier-8b5a89205/" target="_blank" rel="noreferrer">
+                        <FaLinkedinIn />
                     </a>
-                    <a href="https://github.com/sachadvr" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon icon={faGithub} />
+                    <a className="grid place-items-center" href="https://github.com/sachadvr" target="_blank" rel="noreferrer">
+                        <FaGithub />
                     </a>
                 </div>
                 <Link to="/links" className="contact-btn">Me Contacter</Link>
@@ -79,15 +77,15 @@ const Header = () => {
             </div>
         </div>
         <div className="scroll">
-            <Link to="/"
+            <Link className="grid grid-flow-col items-center" to="/"
             onClick={() => {
                 window.scrollTo({
                     top: window.innerHeight,
                     behavior: 'smooth'
                 })
             }}
-            ><span>Scroll</span>
-                <FontAwesomeIcon icon={faAngleDown} />
+            ><span >Scroll</span>
+                <FaAngleDown />
             </Link>
         </div>
 

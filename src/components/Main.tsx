@@ -3,9 +3,8 @@ import Portfolio from './Portfolio'
 import WhoAmi from './WhoAmi'
 import './Main.scss'
 import Contact from './Contact'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faChevronUp} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
+import { FaChevronUp } from 'react-icons/fa'
 
 const Main = () => {
   function ObserveScroll() {
@@ -23,7 +22,7 @@ const Main = () => {
         <Portfolio/>
         <Contact/>
         <div id="topscroll"> 
-        <Link to="/" onClick={e=> {window.scroll(0,0)}}><FontAwesomeIcon icon={faChevronUp} color="black"/>
+        <Link to="/" className="grid" onClick={e=> {window.scroll(0,0)}}><FaChevronUp color='black' />
     </Link></div>
     </main>
   )

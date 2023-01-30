@@ -36,6 +36,7 @@ Technologies used in the project:
 *   FontAwesome
 *   Github Markdown Css
 *   React markdown (Rehype raw/Remark gfm)
+*   React icons
 *   Sass
 
 <h2>💖Like my work?</h2>

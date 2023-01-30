@@ -1,5 +1,3 @@
-import { faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
 import ReactMarkdown from 'react-markdown';
 import { Link, useParams } from 'react-router-dom';
@@ -7,12 +5,13 @@ import rehypeRaw from 'rehype-raw'
 import remarkGfm from 'remark-gfm'
 import githublogo from '../../images/github-logo-vector.svg'
 import 'github-markdown-css/github-markdown-light.css'
+import { FaChevronCircleLeft } from 'react-icons/fa';
 
 const Git = () => {
     const filteredContent = () => {
         let content = (<>
-        <Link to="/"><button>
-            <FontAwesomeIcon icon={faChevronCircleLeft} /> Retour à la page d&apos;accueil</button> </Link><br/>Impossible de trouver le projet...</>);
+        <Link to="/"><button className="flex items-center gap-1">
+            <FaChevronCircleLeft /> Retour à la page d&apos;accueil</button> </Link><br/>Impossible de trouver le projet...</>);
         repo.filter((item:any) => {
             if (item.name === params.repoName) {
                 return item;
@@ -23,7 +22,7 @@ const Git = () => {
           content = (
             <div key={item.name}>
               
-              <Link to="/" ><h1><FontAwesomeIcon icon={faChevronCircleLeft} /> {item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()}</h1> </Link>
+              <Link to="/" ><h1><FaChevronCircleLeft /> {item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()}</h1> </Link>
               {/* <img src={`https://raw.githubusercontent.com/sachadvr/${item.name}/master/preview.png`} alt={item.name} className='w-1/2' /> */}
               <img src={githublogo} alt={item.name} className='w-24' />
               <h1>{item.description}</h1>
@@ -48,7 +47,6 @@ const Git = () => {
     const params = useParams();
     let isFetched = false;
     const [repo, setRepo] = React.useState<any>([]);
-    const [filteredRepo, setFilteredRepo] = React.useState<any>([]);
     const [readme, setReadme] = React.useState<any>([]);
     function fetchRepo() {
         isFetched = true;
