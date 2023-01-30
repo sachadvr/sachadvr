@@ -6,6 +6,7 @@ import { Link, useParams } from 'react-router-dom';
 import rehypeRaw from 'rehype-raw'
 import remarkGfm from 'remark-gfm'
 import githublogo from '../../images/github-logo-vector.svg'
+import 'github-markdown-css/github-markdown-light.css'
 
 const Git = () => {
     const filteredContent = () => {
@@ -31,7 +32,7 @@ const Git = () => {
               <button className="bg-blue-100 p-1">{item.name}</button></a>
               <iframe src={`https://ghbtns.com/github-btn.html?user=sachadvr&repo=${item.name}&type=star&count=true`} frameBorder="0" scrolling="0" width="170px" height="20px"></iframe>
 
-              <div className="container border border-black p-5 mt-3 rounded-sm">
+              <div className="container border border-black p-5 mt-3 rounded-sm markdown-body">
 
               <ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>{readme}</ReactMarkdown>
               </div>
@@ -54,7 +55,11 @@ const Git = () => {
         fetch(`https://raw.githubusercontent.com/sachadvr/${params.repoName}/master/README.md`)
             .then(res => res.text())
             .then(data => {
-                setReadme(data);
+                if (data === '404: Not Found') {
+                    setReadme('Aucun README.md trouvé');
+                }else {
+                    setReadme(data);
+                }
             })
 
             const cookie = document.cookie.split(';').find((item) => item.includes('reposList'));
