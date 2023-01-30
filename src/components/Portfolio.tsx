@@ -45,6 +45,7 @@ const Portfolio = () => {
             languages: languages[index]
         }
     })
+    setPortfolio(port);
     document.cookie = `portfolio=1;expires=${new Date(Date.now() + 3600000)};sameSite=strict;path=/`;
     localStorage.setItem('portfolio', JSON.stringify(port));
     
