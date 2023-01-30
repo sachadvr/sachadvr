@@ -22,7 +22,8 @@ const Git = () => {
           content = (
             <div key={item.name}>
               
-              <Link to="/" ><h1 className="flex items-center gap-1"><FaChevronCircleLeft /> {item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()}</h1> </Link>
+              <Link to="/" ><h1 
+              className="flex items-center gap-1"><FaChevronCircleLeft /> {item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()}</h1> </Link>
               {/* <img src={`https://raw.githubusercontent.com/sachadvr/${item.name}/master/preview.png`} alt={item.name} className='w-1/2' /> */}
               <img src={githublogo} alt={item.name} className='w-24' />
               <h1>{item.description}</h1>
