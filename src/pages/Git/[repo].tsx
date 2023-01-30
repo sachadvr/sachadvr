@@ -8,6 +8,42 @@ import remarkGfm from 'remark-gfm'
 import githublogo from '../../images/github-logo-vector.svg'
 
 const Git = () => {
+    const filteredContent = () => {
+        let content = (<>
+        <Link to="/"><button>
+            <FontAwesomeIcon icon={faChevronCircleLeft} /> Retour à la page d&apos;accueil</button> </Link><br/>Impossible de trouver le projet...</>);
+        repo.filter((item:any) => {
+            if (item.name === params.repoName) {
+                return item;
+            }
+        }
+        ).map((item:any) => {
+            console.log(item);
+          content = (
+            <div key={item.name}>
+              
+              <Link to="/" ><h1><FontAwesomeIcon icon={faChevronCircleLeft} /> {item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()}</h1> </Link>
+              {/* <img src={`https://raw.githubusercontent.com/sachadvr/${item.name}/master/preview.png`} alt={item.name} className='w-1/2' /> */}
+              <img src={githublogo} alt={item.name} className='w-24' />
+              <h1>{item.description}</h1>
+
+              Ouvrir le projet sur github : <a href={`https://github.com/sachadvr/${item.name}`}>
+              <button className="bg-blue-100 p-1">{item.name}</button></a>
+              <iframe src={`https://ghbtns.com/github-btn.html?user=sachadvr&repo=${item.name}&type=star&count=true`} frameBorder="0" scrolling="0" width="170px" height="20px"></iframe>
+
+              <div className="container border border-black p-5 mt-3 rounded-sm">
+
+              <ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>{readme}</ReactMarkdown>
+              </div>
+            </div>
+          )
+
+        }
+        )
+        return content;
+        
+        
+    }
     const params = useParams();
     let isFetched = false;
     const [repo, setRepo] = React.useState<any>([]);
@@ -56,40 +92,7 @@ const Git = () => {
   return (
     <>
     <div className="m-7">
-    {/* filter repo to check if params.repoName is in repo */}
-    {/* show only the part of the repo */}
-    <h1 className='text-sm'>{
-        repo.filter((item:any) => {
-            if (item.name === params.repoName) {
-                return item;
-            }
-        }
-        ).map((item:any) => {
-          return (
-            <div key={item.name}>
-              
-              <Link to="/" ><h1><FontAwesomeIcon icon={faChevronCircleLeft} /> {item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()}</h1> </Link>
-              {/* <img src={`https://raw.githubusercontent.com/sachadvr/${item.name}/master/preview.png`} alt={item.name} className='w-1/2' /> */}
-              <img src={githublogo} alt={item.name} className='w-24' />
-              <h1>{item.description}</h1>
-
-              Ouvrir le projet sur github : <a href={`https://github.com/sachadvr/${item.name}`}>
-              <button className="bg-blue-100 p-1">{item.name}</button></a>
-              <iframe src={`https://ghbtns.com/github-btn.html?user=sachadvr&repo=${item.name}&type=star&count=true`} frameBorder="0" scrolling="0" width="170px" height="20px"></iframe>
-
-              <div className="container border border-black p-5 mt-3 rounded-sm">
-
-              <ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>{readme}</ReactMarkdown>
-              </div>
-            </div>
-          )
-
-        }
-        )
-        
-      
-
-    }</h1>
+    <h1 className='text-sm'>{filteredContent()}</h1>
 
     </div>
     </>

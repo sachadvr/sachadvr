@@ -12,7 +12,6 @@ const Portfolio = () => {
   async function fetchPortfolio() {
     isFetched = true;  
 
-    // check if a cookie exists
     const cookie = document.cookie.split(';').find((item) => item.includes('portfolio'));
     if (cookie) {
         const cookieData = localStorage.getItem('portfolio');
@@ -51,7 +50,6 @@ const Portfolio = () => {
     
         
   }
-  //fetch only once
     React.useEffect(() => {
         if (isFetched) return;
         fetchPortfolio();
