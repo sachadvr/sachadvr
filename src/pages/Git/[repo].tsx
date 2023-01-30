@@ -21,6 +21,12 @@ const Git = () => {
                 setReadme(data);
             })
 
+            const cookie = document.cookie.split(';').find((item) => item.includes('reposList'));
+            if (cookie) {
+                const cookieData = localStorage.getItem('reposList');
+                setRepo(JSON.parse(cookieData!));
+                return;
+            }
         fetch(`https://api.github.com/users/sachadvr/repos`)
         .then(res => res.json())
         .then(data => {
@@ -32,10 +38,9 @@ const Git = () => {
                 }
             }
             )
-            setRepo(repo
-
-            );
-            console.log(repo)
+            setRepo(repo);
+            document.cookie = `reposList=1;expires=${new Date(Date.now() + 3600000)};sameSite=strict;path=/`;
+            localStorage.setItem('reposList', JSON.stringify(repo));
 
         })
 

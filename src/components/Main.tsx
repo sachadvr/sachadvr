@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom'
 
 const Main = () => {
   function ObserveScroll() {
-    console.log(window.scrollY);
     const topScroll = document.getElementById('topscroll');
     if (window.scrollY > 100) {
       topScroll?.classList.add('show');

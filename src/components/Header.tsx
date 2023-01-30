@@ -9,16 +9,32 @@ import { Link } from 'react-router-dom'
 const Header = () => {
 
     const [repos, setRepos] = React.useState(0)
-
+    let isFetched = false;
     useEffect(() => {
+        if (isFetched) return;
         fetchRepos()
     }, [repos])
         
     async function fetchRepos() {
-        fetch("https://api.github.com/users/sachadvr")
+        isFetched = true;
+
+        const cookie = document.cookie.split(';').find((item) => item.includes('repos'));
+        if (cookie) {
+            const cookieData = localStorage.getItem('repos');
+            setRepos(JSON.parse(cookieData!));
+            return;
+        }
+        fetch("https://api.github.com/users/sachadvr",
+        {
+            headers: {
+                'User-Agent': 'request'
+              }
+        })
             .then(response => response.json())
             .then(data => {
                 setRepos(data.public_repos);
+                document.cookie = `repos=1;expires=${new Date(Date.now() + 3600000)}; samesite=strict;`;
+                localStorage.setItem('repos', JSON.stringify(data.public_repos));
             })
         
     }

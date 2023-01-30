@@ -10,33 +10,50 @@ const Portfolio = () => {
   let isFetched = false;
 
   async function fetchPortfolio() {
-    if (isFetched) return;
     isFetched = true;  
-    const response = await fetch('https://api.github.com/users/sachadvr/repos');
+
+    // check if a cookie exists
+    const cookie = document.cookie.split(';').find((item) => item.includes('portfolio'));
+    if (cookie) {
+        const cookieData = localStorage.getItem('portfolio');
+        setPortfolio(JSON.parse(cookieData!));
+        return;
+    }
+
+    const response = await fetch('https://api.github.com/users/sachadvr/repos',
+    {
+        headers: {
+            'User-Agent': 'request'
+          }
+    });
     const data = await response.json();
 
     const languages = await Promise.all(data.map(async (item:any) => {
-        const response = await fetch(`https://api.github.com/repos/sachadvr/${item.name}/languages`);
+        const response = await fetch(`https://api.github.com/repos/sachadvr/${item.name}/languages`,
+        {
+            headers: {
+                'User-Agent': 'request'
+              }
+              });
         const data = await response.json();
         return data;
     }));
     
-    const portfolio = data.map((item:any, index:number) => {
+    const port = data.map((item:any, index:number) => {
         return {
             ...item,
             languages: languages[index]
         }
     })
-    setPortfolio(portfolio);
-
-
+    document.cookie = `portfolio=1;expires=${new Date(Date.now() + 3600000)};sameSite=strict;path=/`;
+    localStorage.setItem('portfolio', JSON.stringify(port));
     
         
   }
   //fetch only once
     React.useEffect(() => {
-        
-  fetchPortfolio();
+        if (isFetched) return;
+        fetchPortfolio();
     }, []);
 
 
