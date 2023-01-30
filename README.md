@@ -31,6 +31,13 @@ Technologies used in the project:
 *   RTK
 *   ESLint
 
+<h2>📦 Dependencies</h2>
+
+*   FontAwesome
+*   Github Markdown Css
+*   React markdown (Rehype raw/Remark gfm)
+*   Sass
+
 <h2>💖Like my work?</h2>
 
 If you have any inquiries please do not hesitate to contact me at contact@sachadvr.fr
