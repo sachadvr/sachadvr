@@ -9,9 +9,9 @@ import { FaChevronCircleLeft } from 'react-icons/fa';
 
 const Git = () => {
     const filteredContent = () => {
-        let content = (<>
+        let content = (<h1 className="text-sm">
         <Link to="/"><button className="flex items-center gap-1">
-            <FaChevronCircleLeft /> Retour à la page d&apos;accueil</button> </Link><br/>Impossible de trouver le projet...</>);
+            <FaChevronCircleLeft /> Retour à la page d&apos;accueil</button> </Link><br/>Impossible de trouver le projet...</h1>);
         repo.filter((item:any) => {
             if (item.name === params.repoName) {
                 return item;
@@ -23,7 +23,7 @@ const Git = () => {
             <div key={item.name}>
               
               <Link to="/" ><h1 
-              className="flex items-center gap-1"><FaChevronCircleLeft /> {item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()}</h1> </Link>
+              className="flex items-center gap-1 text-sm"><FaChevronCircleLeft /> {item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()}</h1> </Link>
               {/* <img src={`https://raw.githubusercontent.com/sachadvr/${item.name}/master/preview.png`} alt={item.name} className='w-1/2' /> */}
               <img src={githublogo} alt={item.name} className='w-24' />
               <h1>{item.description}</h1>
@@ -96,7 +96,7 @@ const Git = () => {
   return (
     <>
     <div className="m-7">
-    <h1 className='text-sm'>{filteredContent()}</h1>
+    <div>{filteredContent()}</div>
 
     </div>
     </>

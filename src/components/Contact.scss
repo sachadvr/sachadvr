@@ -8,6 +8,7 @@ input {
     padding: 10px;
     background-color: rgb(255, 255, 255);
     border: 1px white;
+    color:black;
     cursor: url("..//images/cursor.png") 16 16, auto;
     &:hover {
       background-color: rgb(175, 185, 254);
@@ -37,6 +38,7 @@ input {
     vertical-align: top;
     border-radius: 15px;
     padding: 10px;
+    color:black;
     background-color: rgb(255, 255, 255);
     border: 1px white;
     cursor: url("..//images/cursor.png") 16 16, auto;
