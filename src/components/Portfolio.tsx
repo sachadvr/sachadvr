@@ -67,25 +67,16 @@ const Portfolio = () => {
         
             <h1 className="section-title">Portfolio</h1>
             <div className="portfolio-box">
-                <a className="project-box no-grid project1">
-                    <div className="project-bio">
-                        <h1 className="project-name">CasaRosa.pt <FaSpinner /></h1>
-                        <h3 className="project-desc">En cours</h3>
-                    </div>
-                </a>
-                <a className="project-box no-grid project2">
-                    <div className="project-bio">
-                        <h1 className="project-name">RV-Services <FaSpinner /></h1>
-                        <h3 className="project-desc">En cours</h3>
-                    </div>
-                    
-                </a>
+                
 
                 {portfolio.map((project) => (
-                    <Link className="project-box no-grid noimage" key={project?.name} to={`/git/${project?.name}`}>
+                    <Link className="project-box no-grid noimage" key={project?.name} to={`/git/${project?.name}`}
+                    >
+                        {project?.description != null ? <div className="project-description"> {project?.description} </div>: ""}
+                       
                         <div className="project-bio">
-                            <h1 className="project-name">{project?.name}</h1>
-                            <h3 className="project-desc">{project?.description}
+                            <h1 className="project-name">{project?.name.toUpperCase()}</h1>
+                            <h3 className="project-desc">
                             <div className="langs flex gap-3 items-center">
 
                             {Object.keys(project?.languages).map((language, index) => {
@@ -121,6 +112,14 @@ const Portfolio = () => {
                             </div>
                     </Link>
                 ))}
+
+                {/* <div className="project-box no-grid noimage custom">
+                    <div className="project-bio">
+                        <h1 className="project-name"></h1>
+                        <h3 className="project-desc">
+                            </h3>
+                            </div>
+                            </div> */}
 
             </div>
             
