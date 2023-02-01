@@ -18,10 +18,8 @@ const Git = () => {
             }
         }
         ).map((item:any) => {
-            console.log(item);
           content = (
             <div key={item.name}>
-              
               <Link to="/" ><h1 
               className="flex items-center gap-1 text-sm"><FaChevronCircleLeft /> {item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()}</h1> </Link>
               <img src={githublogo} alt={item.name} className='w-24' />

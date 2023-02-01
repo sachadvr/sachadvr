@@ -1,7 +1,7 @@
 import React from 'react'
 import { DiJavascript } from 'react-icons/di'
 import { FaCss3, FaHtml5, FaPhp, FaPython, FaReact, FaSass, FaVuejs } from 'react-icons/fa'
-import { SiJavascript, SiSymfony, SiTypescript } from 'react-icons/si'
+import { SiSymfony, SiTypescript } from 'react-icons/si'
 import { VscTerminalPowershell } from 'react-icons/vsc'
 import './WhoAmi.scss'
 
@@ -17,11 +17,16 @@ const WhoAmi = () => {
 
         ))
             }else {
-                languages = [];
+                languages = []
             }
             languages = [...new Set(languages)];
             return languages;
     }
+    React.useEffect(() => {
+        getLanguages();
+    }, [])
+
+
   return (
     <>
     <div className="bluredbottom"></div>
@@ -34,11 +39,9 @@ const WhoAmi = () => {
  
                 <blockquote>
                     <p>
-                        {/* fais moi une accroche pour un site vitrine */}
                         <strong>Étudiant en licence d&apos;informatique</strong>,  à l&apos;Université catholique de Lille, je suis un développeur passionné.
 J&apos;ai une expérience professionnelle diversifiée, allant de la gestion d&apos;équipe à la réalisation de projets web en passant par l&apos;encaissement client.
 Je suis passionné par la technologie notamment l’IA et le machine learning et en constante recherche de nouveaux défis professionnels.
-                        {/*  j&apos;ai décidé de me consacrer à mes passions, l&apos;une d&apos;elles est le développement web, d&apos;où m&apos;est venu l&apos;idée de ce site, il fait office de CV en ligne ainsi que d&apos;un référencement pour vous apprendre à mieux me connaitre et à mieux connaitre mes futurs projets. */}
                     </p>
                 </blockquote>
             </div>
@@ -55,7 +58,7 @@ Je suis passionné par la technologie notamment l’IA et le machine learning et
                 <h2>Mes Technologies ?</h2>
     
                 <blockquote>
-                    <div className="mx-auto w-fit flex gap-3 items-center">
+                    <div className="mx-auto w-fit grid gap-3 items-center border p-2 place-items-center grid-flow-col grid-rows-2 w-48 ">
                         <FaReact />
                         <FaVuejs />
                         <SiSymfony />
@@ -80,7 +83,7 @@ Je suis passionné par la technologie notamment l’IA et le machine learning et
                             }
 
                             else {
-                                return language;
+                                return <><span>{language}</span></>
                             }
 
                             
