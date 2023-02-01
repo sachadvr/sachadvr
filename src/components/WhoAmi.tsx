@@ -58,7 +58,7 @@ Je suis passionné par la technologie notamment l’IA et le machine learning et
                 <h2>Mes Technologies ?</h2>
     
                 <blockquote>
-                    <div className="mx-auto w-fit grid gap-3 items-center border p-2 place-items-center grid-flow-col grid-rows-2 w-48 ">
+                    <div className="mx-auto w-fit grid gap-3 items-center border p-2 place-items-center grid-flow-col grid-rows-2 ">
                         <FaReact />
                         <FaVuejs />
                         <SiSymfony />
@@ -83,7 +83,7 @@ Je suis passionné par la technologie notamment l’IA et le machine learning et
                             }
 
                             else {
-                                return <><span>{language}</span></>
+                                return <><span key={language}>{language}</span></>
                             }
 
                             

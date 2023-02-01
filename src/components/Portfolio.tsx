@@ -8,8 +8,8 @@ import './Portfolio.scss'
 
 const Portfolio = () => {
   const [portfolio, setPortfolio] = React.useState<any[]>([]);
-  let isFetched = false;
 
+  let isFetched = false;
   async function fetchPortfolio() {
     isFetched = true;  
 
@@ -70,7 +70,12 @@ const Portfolio = () => {
                 
 
                 {portfolio.map((project) => (
-                    <Link className="project-box no-grid noimage" key={project?.name} to={`/git/${project?.name}`}
+                    <Link onClick={()=> {
+                        window.scrollTo({
+                            top: document.documentElement.scrollTop + document.querySelector('.portfolio-box')!.getBoundingClientRect().top - 120,
+                            behavior: 'smooth'
+                        });
+                    }} className="project-box no-grid noimage" key={project?.name} to={`/git/${project?.name}`}
                     >
                         {project?.description != null ? <div className="project-description"> {project?.description} </div>: ""}
                        
