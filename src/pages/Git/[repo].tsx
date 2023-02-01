@@ -6,6 +6,10 @@ import remarkGfm from 'remark-gfm'
 import githublogo from '../../images/github-logo-vector.svg'
 import 'github-markdown-css/github-markdown-light.css'
 import { FaChevronCircleLeft } from 'react-icons/fa';
+import Header from '../../components/Header';
+import WhoAmi from '../../components/WhoAmi';
+import Contact from '../../components/Contact';
+import Footer from '../../components/Footer';
 
 const Git = () => {
     const filteredContent = () => {
@@ -23,6 +27,7 @@ const Git = () => {
               <Link to="/" ><h1 
               className="flex items-center gap-1 text-sm"><FaChevronCircleLeft /> {item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()}</h1> </Link>
               <img src={githublogo} alt={item.name} className='w-24' />
+              <div className='mb-3'><a className="underline" href="https://github.com/sachadvr?tab=repositories">Repositories</a>/<a className="underline" href={`https://github.com/sachadvr/${item.name}`}>{item.name}</a></div>
               <h1 className="border border-black w-fit p-3 mb-3">{item.description}</h1>
 
               Ouvrir le projet sur github : <a href={`https://github.com/sachadvr/${item.name}`}>
@@ -92,10 +97,14 @@ const Git = () => {
 
   return (
     <>
-    <div className="m-7">
-    <div>{filteredContent()}</div>
+    <Header />
+    <WhoAmi />
+    <div className="w-full mx-auto" style={{maxWidth: '1200px'}}>
+    <div className="m-7">{filteredContent()}</div>
 
     </div>
+    <Contact/>
+    <Footer/>
     </>
 
   )
