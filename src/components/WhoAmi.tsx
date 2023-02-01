@@ -1,6 +1,6 @@
 import React from 'react'
 import { DiJavascript } from 'react-icons/di'
-import { FaCss3, FaHtml5, FaPhp, FaPython, FaReact, FaSass, FaVuejs } from 'react-icons/fa'
+import { FaCss3, FaHtml5, FaJava, FaPhp, FaPython, FaReact, FaSass, FaVuejs } from 'react-icons/fa'
 import { SiSymfony, SiTypescript } from 'react-icons/si'
 import { VscTerminalPowershell } from 'react-icons/vsc'
 import './WhoAmi.scss'
@@ -80,10 +80,12 @@ Je suis passionné par la technologie notamment l’IA et le machine learning et
                                 return <FaPython key={language} />
                             }else if (language == "Shell") {
                                 return <VscTerminalPowershell key={language}/>
+                            }else if (language == "Java") {
+                                return <FaJava key={language} />
                             }
 
                             else {
-                                return <><span key={language}>{language}</span></>
+                                return <span key={language}>{language}</span>
                             }
 
                             

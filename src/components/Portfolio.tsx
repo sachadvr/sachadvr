@@ -1,4 +1,4 @@
-import { FaHtml5, FaCss3, FaSass, FaPython, FaPhp, FaSpinner} from 'react-icons/fa';
+import { FaHtml5, FaCss3, FaSass, FaPython, FaPhp, FaJava} from 'react-icons/fa';
 import {SiTypescript} from 'react-icons/si';
 import { DiJavascript } from 'react-icons/di';
 import { VscTerminalPowershell } from 'react-icons/vsc';
@@ -63,12 +63,10 @@ const Portfolio = () => {
   return (
     <div className="content portfolio">
         <section id="portfolio" className="boxcontainer">
-        <div id="active"><div id="highlight"><p>CasaROSA</p> <br/><br/><p>un projet de famille situé en Alentejo qui permettra la location d&apos;une villa pour 12 personnes</p></div></div>
         
             <h1 className="section-title">Portfolio</h1>
             <div className="portfolio-box">
-                
-
+ 
                 {portfolio.map((project) => (
                     <Link onClick={()=> {
                         window.scrollTo({
@@ -101,7 +99,11 @@ const Portfolio = () => {
                                         return <FaPhp key={language} />
                                     } else if (language == "Python") {
                                         return <FaPython key={language} />
-                                    }else if (language == "Shell") {
+                                    }else if (language == "Java") {
+                                        return <FaJava key={language} />
+                                    }
+                                    
+                                    else if (language == "Shell") {
                                         return <VscTerminalPowershell key={language}/>
                                 }else {
                                     return language;
