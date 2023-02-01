@@ -24,15 +24,14 @@ const Git = () => {
               
               <Link to="/" ><h1 
               className="flex items-center gap-1 text-sm"><FaChevronCircleLeft /> {item.name.charAt(0).toUpperCase() + item.name.slice(1).toLowerCase()}</h1> </Link>
-              {/* <img src={`https://raw.githubusercontent.com/sachadvr/${item.name}/master/preview.png`} alt={item.name} className='w-1/2' /> */}
               <img src={githublogo} alt={item.name} className='w-24' />
-              <h1>{item.description}</h1>
+              <h1 className="border border-black w-fit p-3 mb-3">{item.description}</h1>
 
               Ouvrir le projet sur github : <a href={`https://github.com/sachadvr/${item.name}`}>
               <button className="bg-blue-100 p-1">{item.name}</button></a>
-              <iframe src={`https://ghbtns.com/github-btn.html?user=sachadvr&repo=${item.name}&type=star&count=true`} frameBorder="0" scrolling="0" width="170px" height="20px"></iframe>
+              <iframe className="" src={`https://ghbtns.com/github-btn.html?user=sachadvr&repo=${item.name}&type=star&count=true`} frameBorder="0" scrolling="0" width="170px" height="20px"></iframe>
 
-              <div className="container border border-black p-5 mt-3 rounded-sm markdown-body">
+              <div className="container max-w-none border border-black p-5 rounded-2xl markdown-body ">
 
               <ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>{readme}</ReactMarkdown>
               </div>
