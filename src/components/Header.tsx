@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { FaInstagram, FaTwitter, FaLinkedinIn, FaGithub, FaAngleDown } from 'react-icons/fa'
 
 const Header = () => {
-    const [errormessage, setErrormessage] = React.useState('')
+    const [errormessage] = React.useState('')
 
     const [repos, setRepos] = React.useState(0)
     let isFetched = false;
@@ -20,7 +20,7 @@ const Header = () => {
         const cookie = document.cookie.split(';').find((item) => item.includes('repos'));
         if (cookie) {
             const cookieData = localStorage.getItem('repos');
-            setRepos(JSON.parse(cookieData!));
+            setRepos(JSON.parse(cookieData || ''));
             return;
         }
         fetch("https://api.github.com/users/sachadvr",

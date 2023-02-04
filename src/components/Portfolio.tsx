@@ -39,7 +39,7 @@ const Portfolio = () => {
         return data;
     }));
     
-    const port = data.map((item:any, index:number) => {
+    const port = data.map((item:object, index:number) => {
         return {
             ...item,
             languages: languages[index]
@@ -82,7 +82,7 @@ const Portfolio = () => {
                             <h3 className="project-desc">
                             <div className="langs flex gap-3 items-center">
 
-                            {Object.keys(project?.languages).map((language, index) => {
+                            {Object.keys(project?.languages).map((language) => {
 
                                     if (language == "HTML") {
                                         return <FaHtml5 key={language} />
@@ -119,14 +119,6 @@ const Portfolio = () => {
                             </div>
                     </Link>
                 ))}
-
-                {/* <div className="project-box no-grid noimage custom">
-                    <div className="project-bio">
-                        <h1 className="project-name"></h1>
-                        <h3 className="project-desc">
-                            </h3>
-                            </div>
-                            </div> */}
 
             </div>
             

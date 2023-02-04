@@ -5,23 +5,84 @@ import { SiSymfony, SiTypescript } from 'react-icons/si'
 import { VscTerminalPowershell } from 'react-icons/vsc'
 import './WhoAmi.scss'
 
+import { HiOutlineCode } from 'react-icons/hi'
 const WhoAmi = () => {
+    const [langs, setLangs] = React.useState<JSX.Element[]>([])
+
     function getLanguages() {
-        let languages: any[] = [];
+        let languagesSET: string[] = [];
         if (localStorage.getItem('portfolio') != null) {
             JSON.parse(localStorage.getItem('portfolio') || '{}').map((project: any) => (
-            Object.keys(project?.languages).map((language: any, index: any) => {
-                    languages.push(language);
+            Object.keys(project?.languages).map((language: string,) => {
+                    languagesSET.push(language);
                 }
             )
 
         ))
+            languagesSET = [...new Set(languagesSET)];
+            const languagesElement: JSX.Element[] = [];
+            // Adding icons myself (because github api doesn't theses languages)
+            languagesElement.push(<FaReact key="React" />);
+            languagesElement.push(<FaVuejs key="Vue" />);
+            languagesElement.push(<SiSymfony key="Symfony" />);
+            languagesSET.map((language: string) => {
+                    switch (language) {
+                        case 'JavaScript':
+                            languagesElement.push(<DiJavascript key={language} />)
+                            break;
+                        case 'TypeScript':
+                            languagesElement.push(<SiTypescript key={language} />)
+                            break;
+                        case 'HTML':
+                            languagesElement.push(<FaHtml5 key={language} />)
+                            break;
+                        case 'CSS':
+                            languagesElement.push(<FaCss3 key={language} />)
+                            break;
+                        case 'SCSS':
+                            languagesElement.push(<FaSass key={language} />)
+                            break;
+                        case 'PHP':
+                            languagesElement.push(<FaPhp key={language} />)
+                            break;
+                        case 'Java':
+                            languagesElement.push(<FaJava key={language} />)
+                            break;
+                        case 'Python':
+                            languagesElement.push(<FaPython key={language} />)
+                            break;
+                        case 'React':
+                            languagesElement.push(<FaReact key={language} />)
+                            break;
+                        case 'Vue':
+                            languagesElement.push(<FaVuejs key={language} />)
+                            break;
+                        case 'Symfony':
+                            languagesElement.push(<SiSymfony key={language} />)
+                            break;
+                        case 'PowerShell':
+                            languagesElement.push(<VscTerminalPowershell key={language} />)
+                            break;
+                        case 'Hack':
+                            languagesElement.push(<HiOutlineCode key={language} />)
+                            break;
+                        default:
+                            languagesElement.push(<span key={language}>{language}</span>)
+                    }
+            setLangs(languagesElement)
+        })
             }else {
-                languages = []
+                console.log('Failed to retrieve languages, retrying in 1s...')
+                
+                setTimeout(() => {
+                    getLanguages();
+                }
+                , 1000)
+                
             }
-            languages = [...new Set(languages)];
-            return languages;
+            
     }
+
     React.useEffect(() => {
         getLanguages();
     }, [])
@@ -59,37 +120,8 @@ Je suis passionné par la technologie notamment l’IA et le machine learning et
     
                 <blockquote>
                     <div className="mx-auto w-fit grid gap-3 items-center border p-2 place-items-center grid-flow-col grid-rows-2 ">
-                        <FaReact />
-                        <FaVuejs />
-                        <SiSymfony />
-                        {getLanguages().map((language: any, index: any) => {
-                            if (language == "HTML") {
-                                return <FaHtml5 key={language} />
-                            } else if (language == "CSS") {
-                                return <FaCss3 key={language} />
-                            }else if (language == "SCSS") {
-                                return <FaSass key={language} />
-                            
-                            } else if (language == "JavaScript") {
-                                return <DiJavascript key={language} />
-                            } else if (language == "TypeScript") {
-                                return <SiTypescript key={language} />
-                            } else if (language == "PHP") {
-                                return <FaPhp key={language} />
-                            } else if (language == "Python") {
-                                return <FaPython key={language} />
-                            }else if (language == "Shell") {
-                                return <VscTerminalPowershell key={language}/>
-                            }else if (language == "Java") {
-                                return <FaJava key={language} />
-                            }
-
-                            else {
-                                return <span key={language}>{language}</span>
-                            }
-
-                            
-                        })}
+                        
+                        {langs}
                         
                     </div>
                 </blockquote>
