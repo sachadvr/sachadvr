@@ -67,7 +67,7 @@ const Portfolio = () => {
             <h1 className="section-title">Portfolio</h1>
             <div className="portfolio-box">
  
-                {portfolio.map((project) => (
+                {portfolio && portfolio.map((project) => (
                     <Link onClick={()=> {
                         window.scrollTo({
                             top: document.documentElement.scrollTop + document.querySelector('.portfolio-box')!.getBoundingClientRect().top - 120,

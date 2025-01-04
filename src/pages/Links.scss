@@ -4,7 +4,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: rgb(54, 52, 52);
+	background-color: rgb(37, 37, 37);
 	background-size: cover;
 	background-attachment: fixed;
 	height: 100vh;
@@ -50,12 +50,12 @@
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            background: url(../images/photo.jpeg);
+            background: url(../images/photo.jpg);
             background-size: 100%;
         }
         display: inline-block;
         padding: 8px;
-        background: linear-gradient(130deg, #74b9ff, #ffffff);
+        background: linear-gradient(130deg, #303030, #ffffff);
         margin: auto;
         border-radius: 50%;
         background-size: 200% 200%;
@@ -97,7 +97,7 @@
     .mail {
         a {
             font-size: 18px;
-            color: #74b9ff;
+            color: #b9fafa;
         }
     }
     .sm-box {
@@ -114,9 +114,9 @@
             font-size: 22px;
             transition: .3s linear;
             padding: 5px;
-            border-bottom: solid 3px #74b9ff;
+            border-bottom: solid 3px #b9fafa;
             &:hover {
-                color: #74b9ff;
+                color: #b9fafa;
                 border-bottom: solid 3px white;
                 width: 15%;
             }
@@ -125,13 +125,13 @@
     .contact-btn {
         display: inline-block;
         padding: 12px 50px;
-        color: #74b9ff;
-        border: 2px solid #74b9ff;
+        color: #b9fafa;
+        border: 2px solid #b9fafa;
         border-radius: 6px;
         margin-top: 16px;
         transition: .3s linear;
         &:hover {
-            background: #74b9ff;
+            background: #b9fafa;
             color: #f2f2f2;
         }
     }

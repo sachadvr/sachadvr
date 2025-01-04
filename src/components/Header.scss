@@ -7,6 +7,8 @@
 header {
     @apply flex justify-center items-center bg-gray-100 bg-cover bg-local h-screen relative;
     background: url(../images/bg.jpg) no-repeat center;
+    background-size: cover;
+    filter: grayscale(1);
     
     
     & .profile-card {
@@ -32,7 +34,7 @@ header {
         & .pic {
           display: inline-block;
           padding: 8px;
-          background: linear-gradient(130deg, #8fbfff, #fcfeff);
+          background: linear-gradient(130deg, #303030, #fcfeff);
           background-size: 200% 200%;
           animation: w70 2s, animated-gradient 2s linear infinite;
           border-radius: 50%;
@@ -43,7 +45,7 @@ header {
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            background: url(../images/photo.jpeg);
+            background: url(../images/photo.jpg);
             background-size: 100%;
           }
         }

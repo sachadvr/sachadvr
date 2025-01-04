@@ -31,6 +31,7 @@ const Header = () => {
         })
             .then(response => response.json())
             .then(data => {
+                console.log(data);
                 setRepos(data.public_repos);
                 document.cookie = `repos=1;expires=${new Date(Date.now() + 3600000)}; samesite=strict;`;
                 localStorage.setItem('repos', JSON.stringify(data.public_repos));

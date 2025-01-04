@@ -1,15 +1,14 @@
 import React from 'react'
-import ReactMarkdown from 'react-markdown';
 import { Link, useParams } from 'react-router-dom';
-import rehypeRaw from 'rehype-raw'
-import remarkGfm from 'remark-gfm'
 import githublogo from '../../images/github-logo-vector.svg'
 import 'github-markdown-css/github-markdown-light.css'
+import { marked } from "marked";
 import { FaChevronCircleLeft } from 'react-icons/fa';
 import Header from '../../components/Header';
 import WhoAmi from '../../components/WhoAmi';
 import Contact from '../../components/Contact';
 import Footer from '../../components/Footer';
+import MarkdownViewer from '../../components/MarkdownViewver';
 
 const Git = () => {
     const filteredContent = () => {
@@ -35,8 +34,7 @@ const Git = () => {
               <iframe className="" src={`https://ghbtns.com/github-btn.html?user=sachadvr&repo=${item.name}&type=star&count=true`} frameBorder="0" scrolling="0" width="170px" height="20px"></iframe>
 
               <div className="container max-w-none border border-black p-5 rounded-2xl markdown-body ">
-
-              <ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>{readme}</ReactMarkdown>
+                <MarkdownViewer markdown={readme} />
               </div>
             </div>
           )

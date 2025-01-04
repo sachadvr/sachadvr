@@ -71,7 +71,7 @@
 }
 .portfolio-box {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   overflow: hidden;
   flex-wrap: wrap;
   background: rgb(250, 248, 248);
@@ -158,7 +158,7 @@
 }
 
 
-@for $i from 12 through 20 {
+@for $i from 12 through 30 {
   $color: random-color();
   .noimage:nth-of-type(#{$i}) {
     background-color: $color;

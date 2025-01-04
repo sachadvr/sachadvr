@@ -5,6 +5,9 @@
     bottom: -6vh;
     width: 100%;
 }
+.content blockquote p {
+  text-align: left;
+}
 ::marker {
     &:active {
       color: white;
