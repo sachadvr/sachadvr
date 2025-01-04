@@ -5,7 +5,7 @@
 
 }
 header {
-    @apply flex justify-center items-center bg-gray-100 bg-cover bg-local h-screen relative;
+    @apply flex justify-center items-center bg-gray-100 bg-cover bg-local h-[100dvh] relative;
     background: url(../images/bg.jpg) no-repeat center;
     background-size: cover;
     filter: grayscale(1);
@@ -149,3 +149,9 @@ header {
 }
 
 
+
+@media screen and (max-width: 768px) {
+  header {
+  }
+  
+}

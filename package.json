@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "devhost": "vite --host",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\""
