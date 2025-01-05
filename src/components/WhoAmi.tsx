@@ -116,8 +116,8 @@ const WhoAmi = () => {
           </div>
           <div>
         <h2>Mes Technologies</h2>
-        <div className="mx-auto w-fit grid gap-3 items-center border p-2 place-items-center grid-flow-col grid-rows-2 ">
-          {languagesElements.map((lang: any) => lang)}
+        <div className={`mx-auto w-fit grid gap-3 items-center p-2 place-items-center grid-flow-col grid-rows-2 ${languagesElements.length > 0 ? 'border' : ''}`}>
+          {languagesElements.length > 0 ? languagesElements.map((lang: any) => lang) : "En cours de chargement..."}
         </div>
         </div>
       </section>

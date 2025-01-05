@@ -60,7 +60,7 @@ const Portfolio = () => {
       <section id="portfolio" className="boxcontainer">
         <h1 className="section-title">Portfolio</h1>
         <div className="portfolio-box">
-          {portfolio &&
+          {portfolio.length > 0 ?
             portfolio.map((project) => (
               <Link
                 onClick={() => {
@@ -106,7 +106,7 @@ const Portfolio = () => {
                   </h3>
                 </div>
               </Link>
-            ))}
+            )) : 'Récupération des projets en cours...'}
         </div>
       </section>
     </div>
