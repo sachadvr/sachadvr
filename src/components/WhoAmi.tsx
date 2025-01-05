@@ -1,122 +1,92 @@
 import React from "react";
-import { DiDocker, DiJavascript, DiTerminal } from "react-icons/di";
-import {
-  FaCss3,
-  FaHtml5,
-  FaJava,
-  FaPhp,
-  FaPython,
-  FaReact,
-  FaSass,
-  FaVuejs,
-} from "react-icons/fa";
-import { SiShell, SiSvelte, SiSymfony, SiTypescript } from "react-icons/si";
+import { useAtom } from "jotai";
+import { languagesAtom } from "../store/state";
+import { FaReact, FaVuejs, FaHtml5, FaCss3, FaJava, FaPython, FaPhp, FaSass } from "react-icons/fa";
+import { DiJavascript, DiDocker, DiTerminal } from "react-icons/di";
+import { SiTypescript, SiSvelte, SiSymfony } from "react-icons/si";
 import { VscTerminalPowershell } from "react-icons/vsc";
+import { HiOutlineCode } from "react-icons/hi";
 import "./WhoAmi.scss";
 
-import { HiOutlineCode, HiOutlineQrcode } from "react-icons/hi";
 const WhoAmi = () => {
-  const [langs, setLangs] = React.useState<JSX.Element[]>([]);
-
-  function getLanguages() {
-    let languagesSET: string[] = [];
-    if (localStorage.getItem("portfolio") != null) {
-      JSON.parse(localStorage.getItem("portfolio") || "{}").map(
-        (project: any) =>
-          Object.keys(project?.languages).map((language: string) => {
-            languagesSET.push(language);
-          })
-      );
-      languagesSET = [...new Set(languagesSET)];
-      const languagesElement: JSX.Element[] = [];
-      // Adding icons myself (because github api doesn't theses languages)
-      languagesElement.push(<FaReact key="React" />);
-      languagesElement.push(<FaVuejs key="Vue" />);
-      languagesElement.push(<SiSymfony key="Symfony" />);
-      languagesSET.map((language: string) => {
-        switch (language) {
-          case "JavaScript":
-            languagesElement.push(<DiJavascript key={language} />);
-            break;
-          case "TypeScript":
-            languagesElement.push(<SiTypescript key={language} />);
-            break;
-          case "Go":
-            break;
-          case "Dockerfile":
-            languagesElement.push(<DiDocker key={language} />);
-            break;
-          case "Makefile":
-            break;
-          case "Shell":
-            languagesElement.push(<DiTerminal key={language} />);
-            break;
-          case "NSIS":
-            break;
-          case "Batchfile":
-            break;
-          case "EJS":
-            break;
-          case "Svelte":
-            languagesElement.push(<SiSvelte key={language} />);
-            break;
-          case "HTML":
-            languagesElement.push(<FaHtml5 key={language} />);
-            break;
-          case "CSS":
-            languagesElement.push(<FaCss3 key={language} />);
-            break;
-          case "SCSS":
-            languagesElement.push(<FaSass key={language} />);
-            break;
-          case "PHP":
-            languagesElement.push(<FaPhp key={language} />);
-            break;
-          case "Java":
-            languagesElement.push(<FaJava key={language} />);
-            break;
-          case "Python":
-            languagesElement.push(<FaPython key={language} />);
-            break;
-          case "React":
-            languagesElement.push(<FaReact key={language} />);
-            break;
-          case "Vue":
-            languagesElement.push(<FaVuejs key={language} />);
-            break;
-          case "Symfony":
-            languagesElement.push(<SiSymfony key={language} />);
-            break;
-          case "PowerShell":
-            languagesElement.push(<VscTerminalPowershell key={language} />);
-            break;
-          case "Hack":
-            languagesElement.push(<HiOutlineCode key={language} />);
-            break;
-          default:
-            languagesElement.push(<span key={language}>{language}</span>);
-        }
-        setLangs(languagesElement);
-      });
-    } else {
-      console.log("Failed to retrieve languages, retrying in 1s...");
-
-      setTimeout(() => {
-        getLanguages();
-      }, 1000);
-    }
-  }
+  const [languagesElements, setLanguagesElements] = React.useState<React.ReactNode[]>([]);
+  const [langs, setLangs] = useAtom(languagesAtom);
 
   React.useEffect(() => {
-    getLanguages();
-  }, []);
+    const languagesElement: any = [];
+    new Set(langs).forEach((language) => {
+      console.log(language);
+      switch (language) {
+        case "JavaScript":
+          languagesElement.push(<DiJavascript key={`javascript-${language}`} />);
+          break;
+        case "TypeScript":
+          languagesElement.push(<SiTypescript key={`typescript-${language}`} />);
+          break;
+        case "Go":
+          break;
+        case "Dockerfile":
+          languagesElement.push(<DiDocker key={`docker-${language}`} />);
+          break;
+        case "Makefile":
+          break;
+        case "Shell":
+          languagesElement.push(<DiTerminal key={`terminal-${language}`} />);
+          break;
+        case "NSIS":
+          break;
+        case "Batchfile":
+          break;
+        case "EJS":
+          break;
+        case "Svelte":
+          languagesElement.push(<SiSvelte key={`svelte-${language}`} />);
+          break;
+        case "HTML":
+          languagesElement.push(<FaHtml5 key={`html-${language}`} />);
+          break;
+        case "CSS":
+          languagesElement.push(<FaCss3 key={`css-${language}`} />);
+          break;
+        case "SCSS":
+          languagesElement.push(<FaSass key={`sass-${language}`} />);
+          break;
+        case "PHP":
+          languagesElement.push(<FaPhp key={`php-${language}`} />);
+          break;
+        case "Java":
+          languagesElement.push(<FaJava key={`java-${language}`} />);
+          break;
+        case "Python":
+          languagesElement.push(<FaPython key={`python-${language}`} />);
+          break;
+        case "React":
+          languagesElement.push(<FaReact key={`react-${language}`} />);
+          break;
+        case "Vue":
+          languagesElement.push(<FaVuejs key={`vue-${language}`} />);
+          break;
+        case "Symfony":
+          languagesElement.push(<SiSymfony key={`symfony-${language}`} />);
+          break;
+        case "PowerShell":
+          languagesElement.push(<VscTerminalPowershell key={`powershell-${language}`} />);
+          break;
+        case "Hack":
+          languagesElement.push(<HiOutlineCode key={`hack-${language}`} />);
+          break;
+        default:
+          languagesElement.push(<span key={`default-${language}`}>{language}</span>);
+      }
+    });
+
+    setLanguagesElements(languagesElement);
+  }, [setLangs, langs]);
 
   return (
-    <>
-      <div className="bluredbottom"></div>
-      <div className="content whoami">
-        <section id="whoami">
-          <div>
+    <div className="content whoami">
+      <section id="whoami">
+      <div>
             <h2>Qui suis-je ?</h2>
 
             <blockquote>
@@ -145,17 +115,13 @@ const WhoAmi = () => {
 
           </div>
           <div>
-            <h2>Mes Technologies ?</h2>
-
-            <blockquote>
-              <div className="mx-auto w-fit grid gap-3 items-center border p-2 place-items-center grid-flow-col grid-rows-2 ">
-                {langs.map((lang) => lang)}
-              </div>
-            </blockquote>
-          </div>
-        </section>
-      </div>
-    </>
+        <h2>Mes Technologies</h2>
+        <div className="mx-auto w-fit grid gap-3 items-center border p-2 place-items-center grid-flow-col grid-rows-2 ">
+          {languagesElements.map((lang: any) => lang)}
+        </div>
+        </div>
+      </section>
+    </div>
   );
 };
 

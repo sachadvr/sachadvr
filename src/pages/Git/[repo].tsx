@@ -61,16 +61,9 @@ const Git = () => {
                 }
             })
 
-            const cookie = document.cookie.split(';').find((item) => item.includes('reposList'));
-            if (cookie) {
-                const cookieData = localStorage.getItem('reposList');
-                setRepo(JSON.parse(cookieData!));
-                return;
-            }
-        fetch(`https://api.github.com/users/sachadvr/repos`)
+        fetch(`https://api.sachadvr.fr/repos`)
         .then(res => res.json())
         .then(data => {
-            // return only name & description
             const repo = data.map((item:any) => {
                 return {
                     name: item.name,
@@ -79,8 +72,6 @@ const Git = () => {
             }
             )
             setRepo(repo);
-            document.cookie = `reposList=1;expires=${new Date(Date.now() + 3600000)};sameSite=strict;path=/`;
-            localStorage.setItem('reposList', JSON.stringify(repo));
 
         })
 

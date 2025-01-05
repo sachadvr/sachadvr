@@ -17,13 +17,7 @@ const Header = () => {
     async function fetchRepos() {
         isFetched = true;
 
-        const cookie = document.cookie.split(';').find((item) => item.includes('repos'));
-        if (cookie) {
-            const cookieData = localStorage.getItem('repos');
-            setRepos(JSON.parse(cookieData || ''));
-            return;
-        }
-        fetch("https://api.github.com/users/sachadvr",
+        fetch("https://api.sachadvr.fr/repos",
         {
             headers: {
                 'User-Agent': 'request'
@@ -31,10 +25,7 @@ const Header = () => {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data);
-                setRepos(data.public_repos);
-                document.cookie = `repos=1;expires=${new Date(Date.now() + 3600000)}; samesite=strict;`;
-                localStorage.setItem('repos', JSON.stringify(data.public_repos));
+                setRepos(data.length)
             })
         
     }
