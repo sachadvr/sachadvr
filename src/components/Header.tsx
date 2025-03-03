@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 import './Header.scss'
 import { Link } from 'react-router-dom'
 import { FaInstagram, FaTwitter, FaLinkedinIn, FaGithub, FaAngleDown } from 'react-icons/fa'
-import useFetch from '../hooks/useFetch'
 
 const Header = () => {
     const [errormessage] = React.useState('')
@@ -11,23 +10,38 @@ const Header = () => {
     const [repos, setRepos] = React.useState(0)
     const [lastestRepos, setlastestRepos] = React.useState(0)
 
-    const {data, error, loading} = useFetch("https://api.sachadvr.fr/repos", 'GET')
+    let isFetched = false;
     useEffect(() => {
-        if (loading) return;
-        const updated: any[] = data.filter((item: any) => {
-            const date = new Date(item.updated_at)
-            const now = new Date()
-            const diff = now.getTime() - date.getTime()
-            return diff < 1000 * 60 * 60 * 24 * 30
-        });
-        setlastestRepos(updated.length)
-        setRepos(data.length)
-    }, [data])
+        if (isFetched) return;
+        fetchRepos()
+    }, [repos])
         
+    async function fetchRepos() {
+        isFetched = true;
+
+        fetch("https://api.sachadvr.fr/repos",
+        {
+            headers: {
+                'User-Agent': 'request'
+              }
+        })
+            .then(response => response.json())
+            .then(data => {
+                const updated = data.filter((item: any) => {
+                    const date = new Date(item.updated_at)
+                    const now = new Date()
+                    const diff = now.getTime() - date.getTime()
+                    return diff < 1000 * 60 * 60 * 24 * 30
+                })
+                setlastestRepos(updated.length)
+                setRepos(data.length)
+            })
+        
+    }
   return (
     <header>
         <div className='popup'>
-            {error?.toString()}</div>
+            {errormessage}</div>
         <div className="profile-card">
             <div className="card-header">
 
@@ -56,11 +70,11 @@ const Header = () => {
             <div className="card-footer">
                 <div className="numbers">
                     <div className="item">
-                        <span>{loading ? lastestRepos : '...'}</span> Projets en cours
+                        <span>{lastestRepos || '...'}</span> Projets en cours
                     </div>
                     <div className="border"></div>
                     <div className="item">
-                        <span>{loading ? repos : '...'} </span> Projets finis
+                        <span>{repos || '...'} </span> Projets finis
                     </div>
                     
                 </div>
