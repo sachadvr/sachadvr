@@ -13,7 +13,7 @@
 ⚡ Fun fact: I write my own editor plugins (Zed, Wox…)
 
 ## 🌐 Socials
-[![Website](https://img.shields.io/badge/sachadvr.fr-%23000000.svg?logo=googlechrome&logoColor=white)](https://sachadvr.fr) [![X](https://img.shields.io/badge/X-%23000000.svg?logo=X&logoColor=white)](https://x.com/sachadvr) [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/sachadvr)
+[![Website](https://img.shields.io/badge/sachadvr.fr-%23000000.svg?logo=googlechrome&logoColor=white)](https://sachadvr.fr) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/sachadvr) [![X](https://img.shields.io/badge/X-%23000000.svg?logo=X&logoColor=white)](https://x.com/sachadvr) [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/sachadvr)
 
 # 💻 Tech Stack
 
@@ -37,5 +37,5 @@
 
 ## 🏆 GitHub Trophies
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=sachadvr&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4" />
+  <img src="https://github-trophies.vercel.app/?username=sachadvr&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4" />
 </p>
