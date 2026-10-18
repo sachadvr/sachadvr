@@ -1,41 +1,85 @@
-<h1 align="center">Hi <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="40px" />, I'm Sacha</h1>
+<div align="center">
 
-<p align="center">
-  <a href="https://sachadvr.fr"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&center=true&vCenter=true&width=500&lines=Software+Developer+%40+sweeek;Computer+Science+graduate;Based+in+Lille+%F0%9F%87%AB%F0%9F%87%B7" alt="Typing SVG" /></a>
-</p>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1200&color=BB9AF7&center=true&vCenter=true&width=600&lines=Hi%2C+I'm+Sacha+%F0%9F%91%8B;Software+Developer+%40+sweeek;Terminal+tools%2C+e-commerce+%26+logistics;Based+in+Lille+%F0%9F%87%AB%F0%9F%87%B7" alt="Typing SVG" />
 
-# 💫 About Me
-🎓 Computer Science graduate<br>
-💼 Software Developer at [**sweeek**](https://sweeek.com)<br>
-📍 Lille, France<br>
-🌐 Portfolio: [sachadvr.fr](https://sachadvr.fr)<br>
-🔭 Currently building e-commerce, marketplace & logistics tooling<br>
-⚡ Fun fact: I write my own editor plugins (Zed, Wox…)
+Software developer building e-commerce, marketplace and logistics tooling — and the terminal tools I use every day
 
-## 🌐 Socials
-[![Website](https://img.shields.io/badge/sachadvr.fr-%23000000.svg?logo=googlechrome&logoColor=white)](https://sachadvr.fr) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/sachadvr) [![X](https://img.shields.io/badge/X-%23000000.svg?logo=X&logoColor=white)](https://x.com/sachadvr) [![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&logoColor=white)](https://github.com/sachadvr)
+<br/>
 
-# 💻 Tech Stack
+[![Website](https://img.shields.io/badge/sachadvr.fr-000000?style=for-the-badge&logo=googlechrome&logoColor=white)](https://sachadvr.fr)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/sachadvr)
+[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/sachadvr)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sachadvr)
 
-**Languages**<br>
-![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
+</div>
 
-**Frameworks & Libraries**<br>
-![Symfony](https://img.shields.io/badge/symfony-%23000000.svg?style=for-the-badge&logo=symfony&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D) ![Svelte](https://img.shields.io/badge/svelte-%23f1413d.svg?style=for-the-badge&logo=svelte&logoColor=white) ![.NET](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+---
 
-**Data & DevOps**<br>
-![PostgreSQL](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![RabbitMQ](https://img.shields.io/badge/Rabbitmq-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![GitLab CI](https://img.shields.io/badge/gitlab%20ci-%23181717.svg?style=for-the-badge&logo=gitlab&logoColor=white) ![Datadog](https://img.shields.io/badge/datadog-%23632CA6.svg?style=for-the-badge&logo=datadog&logoColor=white)
+## Working on
 
-# 📊 GitHub Stats
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=sachadvr&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&show_icons=true" height="165" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sachadvr&theme=tokyonight&hide_border=true&layout=compact" height="165" />
-</p>
-<p align="center">
-  <img src="https://streak-stats.demolab.com/?user=sachadvr&theme=tokyonight&hide_border=true" />
-</p>
+**[glance](https://github.com/sachadvr/glance)** `Rust`
+A git pager and branch browser for the terminal. `git diff`, `log`, `show`, `blame`, `branch` and `status` become lists you can scroll, search and click through — syntax highlighting, word-level diffs, files grouped by directory, blame you can follow to the commit.
 
-## 🏆 GitHub Trophies
-<p align="center">
-  <img src="https://github-trophies.vercel.app/?username=sachadvr&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4" />
-</p>
+---
+
+**[zed-razor](https://github.com/sachadvr/zed-razor)** `Tree-sitter`
+Razor (`.razor` / `.cshtml`) syntax highlighting for the Zed editor.
+
+---
+
+**[Wox.Custom.Commands.Plugin](https://github.com/sachadvr/Wox.Custom.Commands.Plugin)** `TypeScript`
+Custom commands plugin for the Wox 2.0 launcher: your own shortcuts, one keystroke away.
+
+---
+
+**[ergonis](https://github.com/sachadvr/ergonis)** `PHP`
+Job planner — [ergonis.app](https://ergonis.app).
+
+---
+
+## Stack
+
+**Languages**
+
+![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+**Frameworks**
+
+![Symfony](https://img.shields.io/badge/Symfony-000000?style=for-the-badge&logo=symfony&logoColor=white)
+![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
+![Svelte](https://img.shields.io/badge/Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![Ratatui](https://img.shields.io/badge/Ratatui-000000?style=for-the-badge&logo=rust&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+
+**Data & Infrastructure**
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![GitLab CI](https://img.shields.io/badge/GitLab%20CI-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white)
+![Datadog](https://img.shields.io/badge/Datadog-632CA6?style=for-the-badge&logo=datadog&logoColor=white)
+
+---
+
+## GitHub
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=sachadvr&theme=tokyonight&hide_border=true&background=0D1117&stroke=BB9AF7&ring=BB9AF7&fire=F7768E&currStreakLabel=BB9AF7" alt="GitHub Streak" />
+</div>
+
+<div align="center">
+  <img src="https://ghchart.rshah.org/BB9AF7/sachadvr" alt="Contribution Graph" />
+</div>
+
+<div align="center">
+  <img src="https://komarev.com/ghpvc/?username=sachadvr&style=flat-square&color=BB9AF7" alt="Profile Views"/>
+</div>
