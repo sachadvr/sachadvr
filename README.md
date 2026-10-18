@@ -81,5 +81,5 @@ Job planner — [ergonis.app](https://ergonis.app).
 </div>
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=sachadvr&style=flat-square&color=BB9AF7" alt="Profile Views"/>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=sachadvr.sachadvr&left_text=Profile%20views&left_color=%23555555&right_color=%23BB9AF7" alt="Profile Views"/>
 </div>
