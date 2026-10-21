@@ -2,7 +2,7 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1200&color=BB9AF7&center=true&vCenter=true&width=600&lines=Hi%2C+I'm+Sacha+%F0%9F%91%8B;Software+Developer+%40+sweeek;Terminal+tools%2C+e-commerce+%26+logistics;Based+in+Lille+%F0%9F%87%AB%F0%9F%87%B7" alt="Typing SVG" />
 
-Software developer building e-commerce, marketplace and logistics tooling — and the terminal tools I use every day
+Software developer building e-commerce, marketplace and logistics tooling, and the terminal tools I use every day
 
 <br/>
 
@@ -18,7 +18,7 @@ Software developer building e-commerce, marketplace and logistics tooling — an
 ## Working on
 
 **[glance](https://github.com/sachadvr/glance)** `Rust`
-A git pager and branch browser for the terminal. `git diff`, `log`, `show`, `blame`, `branch` and `status` become lists you can scroll, search and click through — syntax highlighting, word-level diffs, files grouped by directory, blame you can follow to the commit.
+A git pager and branch browser for the terminal. `git diff`, `log`, `show`, `blame`, `branch` and `status` become lists you can scroll, search and click through: syntax highlighting, word-level diffs, files grouped by directory, blame you can follow to the commit.
 
 ![Public](https://img.shields.io/badge/visibility%3A%20public-3fb950?style=flat-square)
 
@@ -39,20 +39,20 @@ My personal site and portfolio.
 ---
 
 **[anki](https://sachadvr.github.io/anki/)** `React` `Bun` `PWA`
-SimpleAnki — a mobile-first flashcard app with spaced repetition (SM-2 or FSRS) for learning Japanese and Chinese. Installable as a PWA, the decks never leave the device. The source is private, a demo runs on [sachadvr.github.io/anki](https://sachadvr.github.io/anki/).
+SimpleAnki, a mobile-first flashcard app with spaced repetition (SM-2 or FSRS) for learning Japanese and Chinese. Installable as a PWA, the decks never leave the device. The source is private, a demo runs on [sachadvr.github.io/anki](https://sachadvr.github.io/anki/).
 
 ![Private](https://img.shields.io/badge/visibility%3A%20private-d4a72c?style=flat-square)
 
 ---
 
 **AgentView** `Swift` `macOS`
-A native macOS app that turns your coding sessions into a small office you can watch and talk to — live sessions, permission prompts and chat in a floating window. Private, no public preview yet.
+A native macOS app that turns your coding sessions into a small office you can watch and talk to: live sessions, permission prompts and chat in a floating window. Private, no public preview yet.
 
 ![Private](https://img.shields.io/badge/visibility%3A%20private-d4a72c?style=flat-square)
 
 ### Also
 
-**[ergonis](https://github.com/sachadvr/ergonis)** `PHP` — job planner, [ergonis.app](https://ergonis.app)
+**[ergonis](https://github.com/sachadvr/ergonis)** `PHP`, job planner, [ergonis.app](https://ergonis.app)
 
 ---
 
@@ -60,7 +60,7 @@ A native macOS app that turns your coding sessions into a small office you can w
 
 **[Wox.Custom.Commands.Plugin](https://github.com/sachadvr/Wox.Custom.Commands.Plugin)** `TypeScript`
 Custom commands plugin for the Wox 2.0 launcher: your own shortcuts, one keystroke away.
-Merged upstream into [Wox-launcher/Wox](https://github.com/Wox-launcher/Wox) — [#4180](https://github.com/Wox-launcher/Wox/pull/4180) the Custom Commands plugin, [#4181](https://github.com/Wox-launcher/Wox/pull/4181) a bad ID fix, [#4182](https://github.com/Wox-launcher/Wox/pull/4182) the Dracula theme. Also [available in the store](https://www.woxlauncher.com/store/plugin.html?id=09785021-7f9e-4482-903a-51c90a585a7d).
+Merged upstream into [Wox-launcher/Wox](https://github.com/Wox-launcher/Wox): [#4180](https://github.com/Wox-launcher/Wox/pull/4180) the Custom Commands plugin, [#4181](https://github.com/Wox-launcher/Wox/pull/4181) a bad ID fix, [#4182](https://github.com/Wox-launcher/Wox/pull/4182) the Dracula theme. Also [available in the store](https://www.woxlauncher.com/store/plugin.html?id=09785021-7f9e-4482-903a-51c90a585a7d).
 
 ---
 
