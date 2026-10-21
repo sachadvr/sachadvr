@@ -59,7 +59,7 @@ A native macOS app that turns coding agent sessions into a small office you can 
 ## Open source contributions
 
 **[Wox.Custom.Commands.Plugin](https://github.com/sachadvr/Wox.Custom.Commands.Plugin)** `TypeScript`
-Custom commands plugin for the Wox 2.0 launcher: your own shortcuts, one keystroke away.
+Custom commands plugin for the Wox 2.0 launcher: your own shortcuts, one keystroke away. Merged into Wox, and [available in the store](https://www.woxlauncher.com/store/plugin.html?id=09785021-7f9e-4482-903a-51c90a585a7d).
 
 ---
 
