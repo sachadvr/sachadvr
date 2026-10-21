@@ -42,9 +42,19 @@ A native macOS app that turns coding agent sessions into a small office you can 
 
 ### Also
 
-**[zed-razor](https://github.com/sachadvr/zed-razor)** `Tree-sitter` — Razor (`.razor` / `.cshtml`) syntax highlighting for the Zed editor ·
-**[Wox.Custom.Commands.Plugin](https://github.com/sachadvr/Wox.Custom.Commands.Plugin)** `TypeScript` — custom commands plugin for the Wox 2.0 launcher ·
 **[ergonis](https://github.com/sachadvr/ergonis)** `PHP` — job planner, [ergonis.app](https://ergonis.app)
+
+---
+
+## Open source contributions
+
+**[Wox.Custom.Commands.Plugin](https://github.com/sachadvr/Wox.Custom.Commands.Plugin)** `TypeScript`
+Custom commands plugin for the Wox 2.0 launcher: your own shortcuts, one keystroke away.
+
+---
+
+**[zed-razor](https://github.com/sachadvr/zed-razor)** `Tree-sitter`
+Razor (`.razor` / `.cshtml`) syntax highlighting for the Zed editor.
 
 ---
 
