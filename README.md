@@ -17,28 +17,38 @@ Software developer building e-commerce, marketplace and logistics tooling — an
 
 ## Working on
 
-**[glance](https://github.com/sachadvr/glance)** `Rust` ![Public](https://img.shields.io/badge/visibility%3A%20public-3fb950?style=flat-square)
+**[glance](https://github.com/sachadvr/glance)** `Rust`
 A git pager and branch browser for the terminal. `git diff`, `log`, `show`, `blame`, `branch` and `status` become lists you can scroll, search and click through — syntax highlighting, word-level diffs, files grouped by directory, blame you can follow to the commit.
 
+![Public](https://img.shields.io/badge/visibility%3A%20public-3fb950?style=flat-square)
+
 ---
 
-**[marshmallow](https://github.com/sachadvr/marshmallow)** `Symfony` `Vue` `Mercure` ![Public](https://img.shields.io/badge/visibility%3A%20public-3fb950?style=flat-square)
+**[marshmallow](https://github.com/sachadvr/marshmallow)** `Symfony` `Vue` `Mercure`
 A shared clipboard and a "last uploaded file" feed, in real time. Symfony 8 / API Platform 5 / Doctrine on SQLite, Mercure for the live updates, Vue 3 front, all served by a single FrankenPHP image.
 
+![Public](https://img.shields.io/badge/visibility%3A%20public-3fb950?style=flat-square)
+
 ---
 
-**[sachadvr.fr](https://sachadvr.fr)** `React` `TypeScript` ![Public](https://img.shields.io/badge/visibility%3A%20public-3fb950?style=flat-square)
+**[sachadvr.fr](https://sachadvr.fr)** `React` `TypeScript`
 My personal site and portfolio.
 
+![Public](https://img.shields.io/badge/visibility%3A%20public-3fb950?style=flat-square)
+
 ---
 
-**[anki](https://sachadvr.github.io/anki/)** `React` `Bun` `PWA` ![Private](https://img.shields.io/badge/visibility%3A%20private-d4a72c?style=flat-square)
+**[anki](https://sachadvr.github.io/anki/)** `React` `Bun` `PWA`
 SimpleAnki — a mobile-first flashcard app with spaced repetition (SM-2 or FSRS) for learning Japanese and Chinese. Installable as a PWA, the decks never leave the device. The source is private, a demo runs on [sachadvr.github.io/anki](https://sachadvr.github.io/anki/).
 
+![Private](https://img.shields.io/badge/visibility%3A%20private-d4a72c?style=flat-square)
+
 ---
 
-**AgentView** `Swift` `macOS` ![Private](https://img.shields.io/badge/visibility%3A%20private-d4a72c?style=flat-square)
+**AgentView** `Swift` `macOS`
 A native macOS app that turns coding agent sessions into a small office you can watch and talk to — live sessions, permission prompts and chat in a floating window. Private, no public preview yet.
+
+![Private](https://img.shields.io/badge/visibility%3A%20private-d4a72c?style=flat-square)
 
 ### Also
 
