@@ -46,7 +46,7 @@ SimpleAnki — a mobile-first flashcard app with spaced repetition (SM-2 or FSRS
 ---
 
 **AgentView** `Swift` `macOS`
-A native macOS app that turns coding agent sessions into a small office you can watch and talk to — live sessions, permission prompts and chat in a floating window. Private, no public preview yet.
+A native macOS app that turns your coding sessions into a small office you can watch and talk to — live sessions, permission prompts and chat in a floating window. Private, no public preview yet.
 
 ![Private](https://img.shields.io/badge/visibility%3A%20private-d4a72c?style=flat-square)
 
